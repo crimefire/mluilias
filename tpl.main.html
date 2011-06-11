@@ -1,0 +1,90 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="{META_CONTENT_LANGUAGE}"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="{META_CONTENT_LANGUAGE}"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="{META_CONTENT_LANGUAGE}"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{META_CONTENT_LANGUAGE}"> <!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		 
+		<title>{WINDOW_TITLE} {PAGETITLE}</title>
+		
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- BEGIN mh_meta_item -->
+		<meta name="{MH_META_NAME}" lang="{MH_META_LANG}" content="{MH_META_CONTENT}" />
+		<!-- END mh_meta_item -->
+	    <!-- BEGIN HeadBaseTag -->
+	    <!-- set to ilias root for pages delivered by scripts in sub folders (e.g. WebAcessChecker -->
+	    <base href="{BASE}" />
+	    <!-- END HeadBaseTag -->
+	
+		<!-- BEGIN AdditionalStyle -->
+		<link rel="stylesheet" href="{LOCATION_ADDITIONAL_STYLESHEET}" />
+		<!-- END AdditionalStyle -->
+		<!-- BEGIN generic_css -->
+		<link rel="stylesheet" href="{LOCATION_GENERIC_STYLESHEET}" media="{MEDIA_GENERIC_STYLESHEET}" />
+		<!-- END generic_css -->
+		<!-- BEGIN ContentStyle -->
+		<link rel="stylesheet" href="{LOCATION_CONTENT_STYLESHEET}" />
+		<!-- END ContentStyle -->
+		<!-- BEGIN SyntaxStyle -->
+		<link rel="stylesheet" href="{LOCATION_SYNTAX_STYLESHEET}" />
+		<!-- END SyntaxStyle -->
+		<!-- BEGIN ChatStyle -->
+		<link rel="stylesheet" href="{LOCATION_CHAT_STYLESHEET}" />
+				{EXPIRES}
+		<!-- END ChatStyle -->
+		
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		
+		<!-- BEGIN css_file -->
+		<link rel="stylesheet" href="{CSS_FILE}" media="{CSS_MEDIA}" />
+		<!-- END css_file -->
+		<link rel="stylesheet" href="{LOCATION_STYLESHEET}" />
+		<!-- <link rel="P3Pv1" href="{LOCATION_P3PFILE}" /> -->
+		
+		<!-- Auskommentiert, um Laden von delos_cont.css zu verhindern -->
+		<!-- {LOCATION_NEWCONTENT_STYLESHEET_TAG} -->
+		
+		<!-- Modernizr enables HTML5 elements & feature detects -->
+  		<script src="./Customizing/global/skin/mluilias/js/libs/modernizr-2.0.min.js"></script>
+  
+		<!-- BEGIN js_file -->
+		<script src="{JS_FILE}"></script>
+		<!-- END js_file -->
+		
+		{SESSION_REMINDER}
+		
+		<!-- BEGIN HeadContent -->
+		{CONTENT_BLOCK}
+		<!-- END HeadContent -->
+		
+		<!-- BEGIN CalendarJS -->
+		<style>@import url({LOCATION_JAVASCRIPT_CALENDAR_STYLESHEET});</style>
+		<script src="{LOCATION_JAVASCRIPT_CALENDAR}"></script>
+		{CALENDAR_LANG_JAVASCRIPT}
+		<script src="{LOCATION_JAVASCRIPT_CALENDAR_SETUP}"></script>
+		<!-- END CalendarJS -->
+	</head>
+	
+	<body <!-- BEGIN body_class -->class="{BODY_CLASS}" <!-- END body_class --> {BODY_ATTRIBUTES}>
+
+		{CONTENT}
+		
+		<!-- BEGIN on_load_code -->
+		<script>
+		ilAddOnLoad(function() {
+		<!-- BEGIN on_load_code_inner -->{OLCODE}
+		<!-- END on_load_code_inner -->
+		});
+		</script>
+		<!-- END on_load_code -->
+
+	</body>
+	
+</html>

@@ -1,5 +1,21 @@
-/* This is the standard delos.css but with all presentational styles removed */
+/* -- for link pseudo-classes, respect order: Link, Visited, Hover, Active -- 3120 */
 
+body {
+	color:#222222;
+	background-color: #FFFFFF;
+	margin:0px;
+	font-size:0.89em;
+}
+
+body, input, textarea {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+body.std {
+	background-image: url(images/frame_back.gif);
+	background-repeat: repeat-x;
+	background-color: #f0f0f0;
+}
 
 div.ilFrame{
 	padding:5px;
@@ -12,7 +28,29 @@ div.ilFrame{
   margin-right:auto;  
 }
 
+/* --- creates bug in IE6, if hasLayout not given (zoom: 1;) */
+div.ilFrameH{
+	background-image: url(images/head_back.gif);
+	background-repeat: repeat-x;
+	background-color: #a7d3ff;
+    zoom: 1;
+}
+
+div.ilFrameTL{
+	background-image: url(images/tl.gif);
+	background-repeat: no-repeat;
+}
+
+div.ilFrameTR{
+	background-image: url(images/tr.gif);
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+
 div.ilFrameBR{
+	background-image: url(images/brbw.gif);
+	background-repeat: no-repeat;
+	background-position: bottom right;
 	padding: 0px 10px 0px 10px;
 }
 
@@ -41,6 +79,7 @@ label, input[type=checkbox], input[type=radio], select
 
 input[type=text], input[type=file], input[type=password],
 textarea, select, div.input {
+	border: 1px solid #E0E0E0;
 	padding:3px;
 	text-decoration:none;
 	font-size: 90%;
@@ -63,7 +102,8 @@ input[type=text].numeric
 
 input[type=checkbox], input[type=radio]
 {
-
+	border-style: none;
+	background-color: transparent;
 }
 
 /* ---------------- alternating tablerowcolors ----------------- */

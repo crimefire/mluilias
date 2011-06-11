@@ -1,21 +1,307 @@
+/*  
+Name: mluIlias
+URI: http://ilias.urz.uni-halle.de
+Description: Skin für Ilias an der MLU Halle-Wittenberg
+Version: 0.1
+Author: Matthias Kretschmann
+Author URI: http://mkretschmann.com
+*/
+
+@import url('delos.css');
+
 /**
- *  mluIlias - SKIN for ILIAS
- *  -------------------------
- *
- *  Author:     Matthias Kretschmann (http://matthiaskretschmann.com)
- *  Copyright:  (c) by MLU Halle-Wittenberg 
- *              (http://www.uni-halle.de)
- *  Licence:    GNU General Public Licence, Version 3
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
  */
- 
-@import url('delos_layout.css');
+
+html, body, body div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+/* END html5doctor.com Reset */
+
+/**
+ * Minimal base styles
+ * from HTML5Boilerplate */
+
+html { overflow-y: scroll; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+
+body { font: 13px/1.231 sans-serif; *font-size:small; }
+
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+  
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+
+ul, ol { margin-left: 2em; }
+ol { list-style-type: decimal; }
+
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+
+small { font-size: 85%; }
+b, strong, th { font-weight: bold; }
+
+td { vertical-align: top; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
+
+.ie6 legend, .ie7 legend { margin-left: -7px; } 
+
+button, input, select, textarea { width: auto; overflow: visible; margin: 0; font-size: 100%; font-family: sans-serif; vertical-align: baseline; }
+
+textarea { overflow: auto; vertical-align:text-top; }
+
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+
+input::-moz-focus-inner,
+button::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+/* END minimal base styles */
+
+/** =============================
+ *  START THIS THING
+ *  =============================
+ *  =============================
+ */
 
 /* Base stuff
 --------------------------------*/
-body, html {
+body, body.std,html {
 	background: #fbfbfb;
 }
 
 body {
 	border-top: 3px solid #9bc34b;
 }
+
+/* Typography 
+--------------------------------*/
+body, select, input, textarea {
+  color: #444;
+  font: 16px/20px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  text-shadow: 0 1px 0 #fff;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, legend { 
+	font-weight: bold; 
+}
+
+	h1, legend {
+		font-size: 1.7143em; /* 24px */
+  		line-height: 1.6667em; /* 40px */
+  		margin-top: 0.8333em;
+  		margin-bottom: 0em;
+	}
+	
+	h2 {
+		font-size: 1.5714em; /* 22px */
+	  	line-height: 1.8182em; /* 40px */
+	  	margin-top: 0.9091em;
+	  	margin-bottom: 0em;
+	}
+	
+	h3 {
+		font-size: 1.4286em; /* 20px */
+  		line-height: 1em; /* 20px */
+  		margin-top: 1em;
+  		margin-bottom: 0em;
+	}
+	
+	h4 {
+		font-size: 1.2857em; /* 18px */
+  		line-height: 1.1111em; /* 20px */
+  		margin-top: 1.1111em;
+  		margin-bottom: 0em;
+	}
+	
+	h5 {
+		font-size: 1.1429em; /* 16px */
+ 		line-height: 1.25em; /* 20px */
+  		margin-top: 1.25em;
+  		margin-bottom: 0em;
+	}
+	
+	h6 {
+		font-size: 1em; /* 14px */
+  		line-height: 1.4286em; /* 20px */
+  		margin-top: 1.4286em;
+  		margin-bottom: 0em;
+	}
+
+/* Links */
+a, a:link, a:active, a:visited { 
+	color: #6AA101;
+	text-decoration: none;
+}
+
+a:hover {
+	background: #ecf2e2;
+	background: rgba(106, 161, 1, .1);
+	text-decoration: none;
+}
+
+a:hover, a:active { outline: none; }
+
+a:active, a:focus {
+	background-color: black;
+	color: white;
+	text-shadow: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none
+}
+
+/* Ilias non-link anchors */
+a.ilAccAnchor {
+	color: #444;
+	background: none
+}
+
+/* Layout 
+--------------------------------*/
+div.ilFrame {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 1%;
+	position: relative;
+	float: none;
+}
+
+.fullwidth {
+	width: 100%;
+	max-width: 100%;
+}
+
+div.ilFrame.fullwidth {
+	width: 98%;
+	max-width: 98%;
+}
+
+/* Main Header */
+div.ilFrameH, div.ilFrameTL, div.ilFrameTR, div.ilFrameBR, div.ilFrameBL {
+	background: none
+}
+
+form.ilMainMenuSearch {
+	overflow: hidden
+}
+
+form.ilMainMenuSearch > div {
+	position: relative !important;
+	float: right;
+	right: 0;
+}
+
+
+/* Navigation
+--------------------------------*/
+div.ilMainMenu {
+	clear: both;
+	border: 1px solid #86a841;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	-webkit-box-shadow: 0 -1px 4px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 -1px 4px rgba(0,0,0,.2);
+	box-shadow: 0 -1px 4px rgba(0,0,0,.2);
+	background: #9bc34b;
+	background: -moz-linear-gradient(top, #a1cb4f 0%, #9bc34b 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a1cb4f), color-stop(100%,#9bc34b));
+	background: -webkit-linear-gradient(top, #a1cb4f 0%,#9bc34b 100%);
+	background: -o-linear-gradient(top, #a1cb4f 0%,#9bc34b 100%);
+	background: -ms-linear-gradient(top, #a1cb4f 0%,#9bc34b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A1CB4F', endColorstr='#9BC34B',GradientType=0 );
+	background: linear-gradient(top, #a1cb4f 0%,#9bc34b 100%);
+	position: relative;
+	padding: 0;
+	margin-top: 2em
+}
+
+	div.ilMainMenu:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 7px;
+		border-top: 1px solid #fff;
+		border-top: 1px solid rgba(255,255,255,.4);
+		-webkit-border-radius: 7px;
+		-moz-border-radius: 7px;
+		border-radius: 7px;
+	}
+
+div.ilMainMenu li {
+	display: inline;
+	float: left;
+}
+
+div.ilMainMenu a:link {
+	color: #005133;
+	display: block;
+	float: left;
+	padding: .5em 1em;
+	margin: 0;
+	-webkit-transition: background .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out;
+	-o-transition: background .2s ease-in-out;
+	transition: background .2s ease-in-out;
+}
+
+	div.ilMainMenu a:hover,
+	div.ilMainMenu a.MMActive {
+		background: #8cb144;
+		background: rgba(0,0,0,.1);
+		text-decoration: none
+	}
+
+	div.ilMainMenu a.MMActive {
+		color: #fff;
+		text-shadow: 0 -1px 1px #444
+	}
