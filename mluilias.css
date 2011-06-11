@@ -1,0 +1,21 @@
+/**
+ *  mluIlias - SKIN for ILIAS
+ *  -------------------------
+ *
+ *  Author:     Matthias Kretschmann (http://matthiaskretschmann.com)
+ *  Copyright:  (c) by MLU Halle-Wittenberg 
+ *              (http://www.uni-halle.de)
+ *  Licence:    GNU General Public Licence, Version 3
+ */
+ 
+@import url('delos_layout.css');
+
+/* Base stuff
+--------------------------------*/
+body, html {
+	background: #fbfbfb;
+}
+
+body {
+	border-top: 3px solid #9bc34b;
+}
