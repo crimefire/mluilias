@@ -109,7 +109,7 @@ input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5
 
 /* Base stuff
 --------------------------------*/
-body, body.std,html {
+body, body.std, body.kiosk, html {
 	background: #fbfbfb;
 }
 
@@ -602,7 +602,8 @@ h3.ilPDBlockSubHeader {
 }
 
 div.il_Description,
-div.il_ItemProperties {
+div.il_ItemProperties,
+td.il_InfoScreenProperty {
 	color: #909090;
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -652,6 +653,56 @@ span.il_ItemProperty {
 	color: #a4a4a4;
 	margin: 2em 0
 }
+
+/* Kiosk Modus
+--------------------------------*/
+
+
+.kiosk table.fullwidth,
+.kiosk tr.std {
+	background: transparent
+}
+
+#kioskOptions,
+#tst_output {
+	padding: 1em 0;
+}
+
+#tst_output {
+	overflow: visible;
+}
+
+#kioskOptions {
+	border-bottom: 1px solid #dbdbdb;
+	border-top: 1px solid #dbdbdb;
+	color: #a4a4a4
+}
+
+#workingtime {
+	margin: 1em 0 2em 0
+}
+
+div#ilc_Page {
+	margin: 1em 0
+}
+
+h1.ilc_page_title_PageTitle {
+	border-bottom: 3px solid #9bc34b
+}
+
+div.ilc_question_Standard {
+	background: #fff;
+	border-color: #ccc;
+	padding: 3%;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.1)
+}
+
+#finalstatement {
+	width: 240px;
+	margin: 5% auto
+}
+
 
 /* Login Page
 --------------------------------*/
