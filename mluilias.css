@@ -294,13 +294,25 @@ a.ilEditSubmit:active {
 	transition: none;
 }
 
+/* Reverse some button styles thanks to Ilias wird way of using css classes*/
+
+td.submit {
+	background: transparent;
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	padding: 0
+}
+
 /* Selection styles */
 ::-moz-selection{ background: #000; color:#fff; text-shadow: none; }
 ::selection { background:#000; color:#fff; text-shadow: none; }
 
 /* Layout 
 --------------------------------*/
-div.ilFrame {
+div.ilFrame,
+body.kiosk {
 	max-width: 1024px;
 	margin: 0 auto;
 	padding: 0 1%;
@@ -721,6 +733,67 @@ span.il_ItemProperty {
 /* Kiosk Modus
 --------------------------------*/
 
+body.kiosk {
+	overflow: visible;
+	padding: 4%;
+	margin: 3em auto;
+	max-width: 890px
+  	text-shadow: 0 1px 0 #fff;
+	height: 100%;
+	color: #6f5f3f;
+	overflow: visible;
+	position: relative;
+	z-index: 0;
+}
+
+/* Paper background */
+/* https://github.com/kremalicious/csspaperstack */
+body.kiosk,
+body.kiosk:before,
+body.kiosk:after {
+	background: #f4f2ee;
+	background: -moz-linear-gradient(top, #F4F0E7 0%, #F4F2EE 15%, #F4F2EE 85%, #F4F0E7 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F4F0E7), color-stop(15%,#F4F2EE), color-stop(85%,#F4F2EE), color-stop(100%,#F4F0E7));
+	background: -webkit-linear-gradient(top, #F4F0E7 0%,#F4F2EE 15%,#F4F2EE 85%,#F4F0E7 100%);
+	background: -o-linear-gradient(top, #F4F0E7 0%,#F4F2EE 15%,#F4F2EE 85%,#F4F0E7 100%);
+	background: -ms-linear-gradient(top, #F4F0E7 0%,#F4F2EE 15%,#F4F2EE 85%,#F4F0E7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F4F0E7', endColorstr='#F4F0E7',GradientType=0 );
+	background: linear-gradient(top, #F4F0E7 0%,#F4F2EE 15%,#F4F2EE 85%,#F4F0E7 100%);
+	border: 1px solid #deddd9;
+	-webkit-box-shadow: 0 0 4px rgba(0,0,0,.08);
+	-moz-box-shadow: 0 0 4px rgba(0,0,0,.08);
+	box-shadow: 0 0 4px rgba(0,0,0,.08);
+}
+
+	body.kiosk:before,
+	body.kiosk:after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		overflow: hidden;
+	}
+
+	body.kiosk:before {
+		left: -0.5%;
+		-webkit-transform: rotate(2deg);
+		-moz-transform: rotate(2deg);
+		-o-transform: rotate(2deg);
+		transform: rotate(2deg);
+		z-index: -1;
+	}
+
+	body.kiosk:after {
+		width: 99.6%;
+		left: 0.7%;
+		-webkit-transform: rotate(4deg);
+		-moz-transform: rotate(4deg);
+		-o-transform: rotate(4deg);
+		transform: rotate(4deg);
+		z-index: -2;
+	}
 
 .kiosk table.fullwidth,
 .kiosk tr.std {
@@ -733,33 +806,69 @@ span.il_ItemProperty {
 }
 
 #tst_output {
-	overflow: visible;
+	float: none;
 }
 
 #kioskOptions {
-	border-bottom: 1px solid #dbdbdb;
-	border-top: 1px solid #dbdbdb;
-	color: #a4a4a4
+	border-bottom: 1px solid #e4dfd6;
+	border-bottom: 1px solid rgba(163, 153, 132, .2);
+	border-top: 1px solid #e4dfd6;
+	border-top: 1px solid rgba(163, 153, 132, .2);
+	color: #a39984;
 }
 
 #workingtime {
 	margin: 1em 0 2em 0
 }
 
+#tst_output td[align=left],
+#tst_output td[align=right] {
+	width: auto;
+	float: left;
+}
+
+	#tst_output td[align=left] {
+		-moz-opacity: 0.5;
+		-khtml-opacity: 0.5;
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	}
+	
+		#tst_output td[align=left]:hover {
+			-moz-opacity: 1;
+			-khtml-opacity: 1;
+			opacity: 1;
+			filter: alpha(opacity=100);
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		}
+	
+	#tst_output td[align=right] {
+		margin-left: .5em
+	}
+
+#tst_output input.submit {
+	display: block;
+	min-width: 190px
+}
+
 div#ilc_Page {
-	margin: 1em 0
+	margin: 2em 0;
+	background: #fff;
+	border-color: #e4dfd6;
+	padding: 1% 3%;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 
 h1.ilc_page_title_PageTitle {
-	border-bottom: 3px solid #9bc34b
+	border-bottom: 3px solid #9bc34b;
 }
 
 div.ilc_question_Standard {
-	background: #fff;
-	border-color: #ccc;
-	padding: 3%;
-	-webkit-border-radius: 10px;
-	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.1)
+	background: transparent;
+	border: none;
 }
 
 #finalstatement {
