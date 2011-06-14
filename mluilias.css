@@ -519,8 +519,29 @@ a.tabinactive {
 
 /* Sub Tabs */
 
+div.il_SubTab {
+	border-bottom: 1px solid #9fc94e;
+	padding: .5em 1%;
+	width: 98%;
+	margin-bottom: .5em;
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,.1);
+	box-shadow: 0 2px 4px rgba(0,0,0,.1);
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.02) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.02)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.02) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.02) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.02) 100%);
+	background: linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.02) 100%);
+}
+
+ul.il_SubTab {
+	padding: 0
+}
+
 a.subtabactive {
-	color: #444
+	color: #444;
+	font-weight: bold;
 }
 
 a.subtabactive:hover,
@@ -604,17 +625,20 @@ table.ilForm,
 		display: block
 	}
 
-/* Make a lot of stuff borderless */
-div.ilTableOuter,
-table.ilForm {
-	border: none
+td.ilFormHeader, td.ilFormFooter,
+h3.il_InfoScreenSection, th.il_InfoScreenSection,
+div.ilTableHeaderTitle {
+	margin: 2em 10px;
+	background-color: #F8F8F8;
+	vertical-align: middle;
+	padding: .5em .3em
 }
 
-td.ilFormHeader, td.ilFormFooter {
-	background: #f8f8f8;
-	border-top: 1px solid #F0F0F0;
-	border-bottom: 1px solid #F0F0F0;
-	padding: .3em
+/* Make a lot of stuff borderless */
+div.ilTableOuter,
+table.ilForm,
+table.ilContainerBlock {
+	border: none
 }
 
 h3.ilPDBlockSubHeader {
