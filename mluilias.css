@@ -589,20 +589,34 @@ td.il_RightColumn {
 
 div.il_HeaderInner {
 	float: none;
-	margin: 1em 0;
-	padding-bottom: 0;
-	padding-right: 0;
+	padding: 0
 }
 
+h1.ilHeader {
+	padding: 0;
+	margin: 1em 0 1em 50px;
+	border-bottom: 1px solid #F0F0F0;
+	-webkit-box-shadow: 0 1px 0 #fff;
+	-moz-box-shadow: 0 1px 0 #fff;
+	box-shadow: 0 1px 0 #fff;
+	position: relative;
+}
+	
+	h1.ilHeader span {
+		left: -50px !important;
+	}
+	
+	h1.ilHeader img {
+		vertical-align: text-bottom !important;
+	}
+
 div.ilHeaderDesc {
-	padding-left: 0;
+	padding: 0;
 	margin-left: 51px;
 	font-size: 1em;
 	color: #A4A4A4;
-	border-top: 1px solid #F0F0F0;
-	-webkit-box-shadow: inset 0 1px 0 #fff;
-	-moz-box-shadow: inset 0 1px 0 #fff;
-	box-shadow: inset 0 1px 0 #fff;
+	margin-top: -1.3em;
+	margin-bottom: 1em
 }
 
 /* Smoooooth & Rooooomy table rows */
@@ -655,7 +669,10 @@ td.il_InfoScreenProperty {
 	transition: color .2s ease-in-out;
 }
 
-div.il_ContainerItemCommands2 {
+/* Hide action elements, show them on hover */
+
+div.il_ContainerItemCommands2,
+div.il_BlockInfo {
 	-moz-opacity: 0;
 	-khtml-opacity: 0;
 	opacity: 0;
@@ -666,7 +683,9 @@ div.il_ContainerItemCommands2 {
 }
 
 	td.ilCLI:hover div.il_ContainerItemCommands2,
-	.touch div.il_ContainerItemCommands2 {
+	.touch div.il_ContainerItemCommands2,
+	td.std:hover div.il_BlockInfo,
+	.touch div.il_BlockInfo {
 		-moz-opacity: 1;
 		-khtml-opacity: 1;
 		opacity: 1;
