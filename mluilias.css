@@ -688,7 +688,11 @@ div.ilTableHeaderTitle {
 /* Make a lot of stuff borderless */
 div.ilTableOuter,
 table.ilForm,
-table.ilContainerBlock {
+table.ilContainerBlock,
+table.calmini,
+td.calministd,
+td.calmininext,
+td.calminiprev {
 	border: none
 }
 
@@ -900,6 +904,37 @@ div.ilc_question_Standard {
 	width: 240px;
 	margin: 5% auto
 }
+
+/* Kalender
+--------------------------------*/
+
+td.calminiweek, th.calminiweek,
+.calminiheader th.calmini {
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size: .7em
+}
+
+	.calminiheader th.calmini {
+		font-size: .8em;
+		color: #909090
+	}
+
+p.il_calmini_monthday a, div.il_calmini_monthday a {
+	display: block;
+	padding: .3em
+}
+
+td.calmininext,
+td.calminiprev {
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
 
 /* Voransicht als Mitglied
 --------------------------------*/
