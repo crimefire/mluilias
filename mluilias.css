@@ -251,6 +251,7 @@ input[type="search"] {
 
 button, 
 input[type="submit"],
+input.submit,
 a.submit,
 .button {
 	color: #1c5562;
@@ -278,13 +279,20 @@ a.submit,
 
 button:hover, 
 input[type="submit"]:hover,
+input.submit:hover,
 a.submit:hover,
 .button:hover {
-	
+	border: 1px solid #c5cfcf;
+	border-bottom-color: #b0b9bb;
+	font-size: .9em;
+	line-height: 20px;
+	font-weight: bold;
 }
 
 button:active, 
 input[type="submit"]:active,
+input.submit:active,
+a.submit:active,
 .button:active,
 a.ilEditSubmit:active {
 	top: 1px;
@@ -892,6 +900,44 @@ div.ilc_question_Standard {
 #finalstatement {
 	width: 240px;
 	margin: 5% auto
+}
+
+/* Voransicht als Mitglied
+--------------------------------*/
+
+div.ilMemberViewMainHeader {
+	background-color: rgba(152, 26, 10, .9);
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 56%, rgba(0,0,0,0.2) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(56%,rgba(0,0,0,0.05)), color-stop(100%,rgba(0,0,0,0.2)));
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 56%,rgba(0,0,0,0.2) 100%);
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 56%,rgba(0,0,0,0.2) 100%);
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 56%,rgba(0,0,0,0.2) 100%);
+	background-image: linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 56%,rgba(0,0,0,0.2) 100%);
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.5);
+	box-shadow: 0 1px 4px rgba(0,0,0,.5);
+	border-bottom: 1px solid #5c0a05;
+	margin-bottom: 1em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+	padding-top: 0
+}
+
+div.ilMemberViewMainHeader > div {
+	padding: 0 2% !important
+}
+
+div.ilMemberViewMainHeader h1 {
+	text-shadow: 0 -1px 0 #000;
+	margin-top: 0;
+}
+
+div.ilMemberViewMainHeader h4 {
+	margin-top: .5em;
+	float: right;
 }
 
 
