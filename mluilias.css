@@ -109,7 +109,7 @@ input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5
 
 /* Base stuff
 --------------------------------*/
-body, body.std, body.kiosk, html {
+html, body, body.std, body.kiosk, body.il_Explorer {
 	background: #fbfbfb;
 }
 
@@ -756,12 +756,15 @@ span.il_ItemProperty {
 	
 }
 
-/* block_top.gif not found fix */
+/* delos layout images not found fix */
 
 td.ilBlockHeader, td.ilBlockHeaderBig,
 th.ilContainerBlockHeader,
 div.ilTableHeaderTitleBlock,
-.il_VAccordionHead, .il_HAccordionHead {
+.il_VAccordionHead, .il_HAccordionHead,
+div.il_Explorer,
+div.ilExpH,
+td.ilExpBody {
 	background-image: none
 }
 
