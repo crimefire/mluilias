@@ -719,8 +719,7 @@ td.il_InfoScreenProperty {
 
 /* Hide action elements, show them on hover */
 
-div.il_ContainerItemCommands2,
-div.il_BlockInfo {
+div.il_ContainerItemCommands2 {
 	-moz-opacity: 0;
 	-khtml-opacity: 0;
 	opacity: 0;
@@ -731,9 +730,7 @@ div.il_BlockInfo {
 }
 
 	td.ilCLI:hover div.il_ContainerItemCommands2,
-	.touch div.il_ContainerItemCommands2,
-	td.std:hover div.il_BlockInfo,
-	.touch div.il_BlockInfo {
+	.touch div.il_ContainerItemCommands2 {
 		-moz-opacity: 1;
 		-khtml-opacity: 1;
 		opacity: 1;
