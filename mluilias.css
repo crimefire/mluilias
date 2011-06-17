@@ -373,12 +373,11 @@ form.ilMainMenuSearch > div {
 	position: relative !important;
 	float: right;
 	right: 0 !important;
-	margin-top: .5em !important
+	margin-top: 1em !important
 }
 
 input.ilMainMenuSearch {
 	padding: .2em .5em;
-	margin-top: .5em;
 	background-image: none;
 	font-size: .9em !important
 }
