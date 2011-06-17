@@ -696,8 +696,11 @@ table.ilContainerBlock,
 table.calmini,
 td.calministd,
 td.calmininext,
-td.calminiprev {
-	border: none
+td.calminiprev,
+div.ilc_page_tnav_TopNavigation, th.ilc_page_tnav_TopNavigation,
+table.ilc_page_cont_PageContainer, th.ilc_page_cont_PageContainer,
+div.ilc_page_bnav_BottomNavigation, th.ilc_page_bnav_BottomNavigation {
+	border: none !important;
 }
 
 h3.ilPDBlockSubHeader {
