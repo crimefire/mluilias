@@ -756,6 +756,15 @@ span.il_ItemProperty {
 	
 }
 
+/* block_top.gif not found fix */
+
+td.ilBlockHeader, td.ilBlockHeaderBig,
+th.ilContainerBlockHeader,
+div.ilTableHeaderTitleBlock,
+.il_VAccordionHead, .il_HAccordionHead {
+	background-image: none
+}
+
 /* Global Footer
 --------------------------------*/
 #ilMainFooter {
