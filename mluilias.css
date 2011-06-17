@@ -340,15 +340,14 @@ div.ilFrameH, div.ilFrameTL, div.ilFrameTR, div.ilFrameBR, div.ilFrameBL {
 }
 
 div.ilLogin {
-	padding-right: 0
+	padding-right: 0;
+	float: right;
 }
 
 div.ilMainMenuSearch {
 	margin: 0
-}
-
-form.ilMainMenuSearch {
-	overflow: hidden
+	float: right;
+	clear: right;
 }
 
 form.ilMainMenuSearch > div {
@@ -358,7 +357,12 @@ form.ilMainMenuSearch > div {
 }
 
 div.ilTopTitle {
-	color: #7d7d7d
+	color: #8a8a8a;
+}
+
+div.ilTopTitle span {
+	display: block;
+	color: #b7b7b7
 }
 
 .ilMainHeader div:first-child img {
