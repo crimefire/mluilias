@@ -484,7 +484,7 @@ input.ilMainMenuSearch {
 	}
 
 input.ilMainMenuSearchSubmit {
-	background: transparent url(images/icon-loupe.png) no-repeat center center;
+	background: transparent url(images/icon-search.png) no-repeat center center;
 	padding: 0;
 	width: 16px;
 	height: 16px;
