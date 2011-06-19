@@ -603,9 +603,21 @@ div.ilLocator:hover {
 
 /* Tabs */
 
+
+li.tabactive,
+a.tabinactive {
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+
 li.tabactive {
 	border-color: #9fc94e #9fc94e #FFFFFF;
-	font-weight: bold
+	font-weight: bold;
 }
 
 	li.tabactive a {
@@ -616,15 +628,15 @@ li.tabinactive {
 	border-bottom: 1px solid #9fc94e;
 }
 
-a.tabinactive {
-	background-color: #f6fcec;
-	border-color: #9fc94e #9fc94e;
-	border-color: rgba(159, 201, 78, .5) rgba(159, 201, 78, .5);
-}
-
-	a.tabinactive:hover {
-		color: #80a101
+	a.tabinactive {
+		background-color: #f6fcec;
+		border-color: #9fc94e #9fc94e;
+		border-color: rgba(159, 201, 78, .5) rgba(159, 201, 78, .5);
 	}
+	
+		a.tabinactive:hover {
+			color: #80a101
+		}
 
 /* Sub Tabs */
 
