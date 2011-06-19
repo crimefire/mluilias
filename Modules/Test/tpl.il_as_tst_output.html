@@ -32,29 +32,22 @@
 			</td>
 		</tr>
 </table>
-<table class="fullwidth">
-	<tr>
-	<td align="left" width="33%" class="submit">
-<!-- BEGIN prev -->
-		<input type="submit" class="submit" name="cmd[previous]" value="{BTN_PREV}" id="prevbutton" />
-<!-- END prev -->
-	</td>
-	<td align="left" width="1" class="submit">
-<!-- BEGIN summary -->
-		<input type="submit" class="submit" name="cmd[summary]" value="{BTN_SUMMARY}" id="summarybutton" />
-<!-- END summary -->
-	</td>
-	<td align="right" width="33%" class="submit">
-<!-- BEGIN postpone -->
+
+<div class="fullwidth clearfix" id="testbuttons">
+	<!-- BEGIN prev -->
+	<input type="submit" class="submit" name="cmd[previous]" value="{BTN_PREV}" id="prevbutton" />
+	<!-- END prev -->
+	<!-- BEGIN summary -->
+	<input type="submit" class="submit" name="cmd[summary]" value="{BTN_SUMMARY}" id="summarybutton" />
+	<!-- END summary -->
+	<!-- BEGIN postpone -->
 	<input type="submit" class="submit" name="cmd[postpone]" value="{BTN_POSTPONE}" id="postponebutton" />
-	&nbsp;&nbsp;
-<!-- END postpone -->
-<!-- BEGIN next -->
+	<!-- END postpone -->
+	<!-- BEGIN next -->
 	<input type="submit" class="submit" name="cmd[next]" value="{BTN_NEXT}" id="nextbutton" />
-<!-- END next -->
-	</td>
-	</tr>
-</table>
+	<!-- END next -->
+</div>
+
 <!-- BEGIN closeform --></form><!-- END closeform -->
 <table class="fullwidth">
 	<tr class="std">
@@ -80,32 +73,26 @@
 	</tr>
 </table>
 <!-- BEGIN reopenform --><form name="test_output_bottom" method="post" action="{FORMACTION_REOPENFORM}"><!-- END reopenform -->
+
 <!-- BEGIN navigation_bottom -->
-<table class="fullwidth">
-	<tr>
-		<td align="left" width="33%" class="submit">
-<!-- BEGIN prev_bottom -->
-			<input type="submit" class="submit" name="cmd[previous]" value="{BTN_PREV}" id="bottomprevbutton" />
-<!-- END prev_bottom -->
-		</td>
-		<td align="left" width="1" class="submit">
-<!-- BEGIN summary_bottom  -->
-			<input type="submit" class="submit" name="cmd[summary]" value="{BTN_SUMMARY}" id="bottomsummarybutton" />
-<!-- END summary_bottom -->
-		</td>
-		<td align="right" width="33%" class="submit">
-<!-- BEGIN postpone_bottom -->
-			<input type="submit" class="submit" name="cmd[postpone]" value="{BTN_POSTPONE}" id="bottompostponebutton" />
-			&nbsp;&nbsp;
-<!-- END postpone_bottom -->
-<!-- BEGIN next_bottom -->
-			<input type="submit" class="submit" name="cmd[next]" value="{BTN_NEXT}" id="bottomnextbutton" />
-<!-- END next_bottom -->
-		</td>
-	</tr>
-</table>
+<div class="fullwidth clearfix" id="bottomtestbuttons">
+	<!-- BEGIN prev_bottom -->
+	<input type="submit" class="submit" name="cmd[previous]" value="{BTN_PREV}" id="bottomprevbutton" />
+	<!-- END prev_bottom -->
+	<!-- BEGIN summary_bottom  -->
+	<input type="submit" class="submit" name="cmd[summary]" value="{BTN_SUMMARY}" id="bottomsummarybutton" />
+	<!-- END summary_bottom -->
+	<!-- BEGIN postpone_bottom -->
+	<input type="submit" class="submit" name="cmd[postpone]" value="{BTN_POSTPONE}" id="bottompostponebutton" />
+	<!-- END postpone_bottom -->
+	<!-- BEGIN next_bottom -->
+	<input type="submit" class="submit" name="cmd[next]" value="{BTN_NEXT}" id="bottomnextbutton" />
+	<!-- END next_bottom -->
+</div>
 <!-- END navigation_bottom -->
+
 <p></p>
+
 <input type="hidden" name="formtimestamp" value="{FORM_TIMESTAMP}" />
 <!-- BEGIN js_initialize -->
 {JS_INITIALIZE}

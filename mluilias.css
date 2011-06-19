@@ -347,6 +347,10 @@ div.ilFrameH, div.ilFrameTL, div.ilFrameTR, div.ilFrameBR, div.ilFrameBL {
 	background: none
 }
 
+div.ilMainHeader {
+	position: relative
+}
+
 div.ilTopTitle {
 	color: #8a8a8a;
 	padding-top: 0;
@@ -365,8 +369,10 @@ div.ilLogin {
 
 div.ilMainMenuSearch {
 	margin: 0;
-	float: right;
-	clear: right;
+	position: absolute;
+	right: 3px;
+	bottom: 3px;
+	z-index: 5
 }
 
 form.ilMainMenuSearch > div {
@@ -378,9 +384,33 @@ form.ilMainMenuSearch > div {
 
 input.ilMainMenuSearch {
 	padding: .2em .5em;
+	padding-right: 24px;
 	background-image: none;
-	font-size: .9em !important
+	font-size: .9em !important;
+	border: 1px solid #86a841;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.6);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.6);
+	box-shadow: 0 1px 0 rgba(255,255,255,.6);
 }
+
+input.ilMainMenuSearchSubmit {
+	background: transparent url(images/icon-loupe.png) no-repeat center center;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+	text-indent: -99999px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+	input.ilMainMenuSearchSubmit:active {
+		top: 6px
+	}
 
 div.ilMainHeader > div:first-child {
 	margin: .7em 0;
@@ -867,13 +897,16 @@ body.kiosk:after {
 	margin: 1em 0 2em 0
 }
 
-#tst_output td[align=left],
-#tst_output td[align=right] {
-	width: auto;
-	float: left;
+#testbuttons {
+	
 }
 
-	#tst_output td[align=left] {
+	#testbuttons input.submit,
+	#bottomtestbuttons input.submit {
+		float: left
+	}
+	
+	#prevbutton, #bottomprevbutton {
 		-moz-opacity: 0.5;
 		-khtml-opacity: 0.5;
 		opacity: 0.5;
@@ -881,16 +914,18 @@ body.kiosk:after {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	}
 	
-		#tst_output td[align=left]:hover {
-			-moz-opacity: 1;
-			-khtml-opacity: 1;
-			opacity: 1;
-			filter: alpha(opacity=100);
-			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-		}
+	#summarybutton, #bottomsummarybutton {}
 	
-	#tst_output td[align=right] {
-		margin-left: .5em
+	#postponebutton, #bottompostponebutton {}
+	
+	#nextbutton, #bottomnextbutton {}
+
+	#tst_output td[align=left]:hover {
+		-moz-opacity: 1;
+		-khtml-opacity: 1;
+		opacity: 1;
+		filter: alpha(opacity=100);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	}
 
 #tst_output input.submit {
