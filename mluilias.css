@@ -144,11 +144,14 @@ h1, h2, h3, h4, h5, h6, legend {
 	  	margin-bottom: 0em;
 	}
 	
-	h3 {
+	h3,
+	h3.ilFormHeader,
+	h3.il_InfoScreenSection {
 		font-size: 1.4286em; /* 20px */
   		line-height: 1em; /* 20px */
   		margin-top: 1em;
   		margin-bottom: 0em;
+  		font-weight: normal
 	}
 	
 	h4 {
@@ -697,6 +700,11 @@ table.ilTabContentOuter {
 	border-color: #9fc94e;
 }
 
+div.ilTabContentInner {
+	margin: 0;
+	padding: 2%;
+}
+
 table.il_InfoScreen,
 table.il_Block, .ilOverlay  {
 	border: none
@@ -708,6 +716,12 @@ td.il_LeftColumn {
 
 td.il_RightColumn {
 	padding-left: 20px;
+}
+
+th.ilPDBlockSubHeader,
+td.ilBlockHeader, td.ilBlockHeaderBig,
+td.ilFormHeader, td.ilFormFooter {
+	font-size: 100%
 }
 
 /* Section Heading */
@@ -744,9 +758,15 @@ div.ilHeaderDesc {
 	margin-bottom: 1em
 }
 
-/* Smoooooth & Rooooomy table rows */
-table.ilForm,
+table.std {
+	background: #fff
+}
+
+/* Smoooooth & Rooooomy tables */
+
+table.std, table.ilForm,
 .ilCLIRow1, .ilCLIRow2 {
+	background: #fff;
 	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.02) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.02)));
 	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.02) 100%);
@@ -764,13 +784,39 @@ table.ilForm,
 		display: block
 	}
 
-td.ilFormHeader, td.ilFormFooter,
-h3.il_InfoScreenSection, th.il_InfoScreenSection,
+th.il_InfoScreenSection,
 div.ilTableHeaderTitle {
-	margin: 2em 10px;
-	background-color: #F8F8F8;
+	border: none;
+	margin: 0;
+	padding: 0;
 	vertical-align: middle;
-	padding: .5em .3em
+}
+
+td.ilFormHeader, td.ilFormFooter {
+	background: none;
+	padding: .5em .3em;
+	margin: 2em 0;
+}
+
+h3.ilFormHeader,
+h3.ilTableHeaderTitle,
+h3.il_InfoScreenSection {
+	display: block;
+	background-color: #F8F8F8;
+	padding: .5em .3em;
+	margin: 1em 0;
+	border-bottom: 1px solid #E9E9E9;
+	font-weight: normal
+}
+
+h3.ilBlockHeader,
+h3.ilPDBlockSubHeader,
+td.ilBlockHeader, td.ilBlockHeaderBig {
+	font-weight: normal;
+}
+
+h3.ilPDBlockSubHeader {
+	color: #8a8a8a
 }
 
 /* Make a lot of stuff borderless */
@@ -785,10 +831,6 @@ div.ilc_page_tnav_TopNavigation, th.ilc_page_tnav_TopNavigation,
 table.ilc_page_cont_PageContainer, th.ilc_page_cont_PageContainer,
 div.ilc_page_bnav_BottomNavigation, th.ilc_page_bnav_BottomNavigation {
 	border: none !important;
-}
-
-h3.ilPDBlockSubHeader {
-	font-weight: bold;
 }
 
 div.il_Description,
@@ -836,8 +878,9 @@ div.ilFormInfo {
 		color: #444
 	}
 
-span.il_ItemProperty {
-	
+h3.ilFormHeader + div.ilFormInfo {
+	border-top: none;
+	font-size: 1em
 }
 
 /* delos layout images not found fix */
@@ -856,6 +899,7 @@ td.ilExpBody {
 --------------------------------*/
 #ilMainFooter {
 	font-size: .7em;
+	line-height: 1.3em;
 	color: #a4a4a4;
 	margin: 2em 0
 }
@@ -1262,7 +1306,8 @@ div.ilMemberViewMainHeader h4 {
 @media only screen and (max-width: 768px) {
   
 	.ilFrame {
-	  	font-size: .9em
+	  	font-size: .9em;
+	  	line-height: 1.2em
 	  }
 	 
 	div.ilMainHeader div:first-child img {
@@ -1272,6 +1317,10 @@ div.ilMemberViewMainHeader h4 {
 	
 	div.ilTopTitle {
 		margin-top: .7em;
+	}
+	
+	div.ilTabContentInner {
+		padding: 1%;
 	}
   
 }
