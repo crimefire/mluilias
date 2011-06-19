@@ -243,17 +243,21 @@ textarea:focus {
 	outline: none
 }
 
-input[type="search"] {
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
+/* Reset delos button styles */
+
+input.submit, a.submit,
+input.ilEditSubmit,
+a.submit:hover, input.submit:hover,
+input.ilEditSubmit:hover {
+	background-color: transparent;
+    background-image: none;
 }
 
-button, 
-input[type="submit"],
+/* Start our own button styles */
+
 input.submit,
 a.submit,
-.button {
+input.ilEditSubmit {
 	color: #1c5562;
 	background-color: #dfeae7;
 	background-image: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,0) 3%, rgba(0,0,0,0.01) 27%, rgba(0,0,0,0.05) 100%);
@@ -274,43 +278,24 @@ a.submit,
 	position: relative;
 	line-height: 20px;
 	font-weight: bold;
-	font-size: .9em
-}
-
-button:hover, 
-input[type="submit"]:hover,
-input.submit:hover,
-a.submit:hover,
-.button:hover {
-	border: 1px solid #c5cfcf;
-	border-bottom-color: #b0b9bb;
 	font-size: .9em;
-	line-height: 20px;
-	font-weight: bold;
 }
 
-button:active, 
-input[type="submit"]:active,
+a.submit:hover, input.submit:hover,
+input.ilEditSubmit:hover {
+	border-bottom-color: #b0b9bb;
+	background-color: #dfeae7;
+	color: #444444;
+}
+
 input.submit:active,
 a.submit:active,
-.button:active,
 a.ilEditSubmit:active {
 	top: 1px;
 	-webkit-transition: none;
 	-moz-transition: none;
 	-o-transition: none;
 	transition: none;
-}
-
-/* Reverse some button styles thanks to Ilias wird way of using css classes*/
-
-td.submit {
-	background: transparent;
-	border: none;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	padding: 0
 }
 
 /* Selection styles */
