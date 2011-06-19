@@ -377,21 +377,32 @@ div.ilMainMenuSearch {
 
 form.ilMainMenuSearch > div {
 	position: relative !important;
-	float: right;
 	right: 0 !important;
-	margin-top: 1em !important
 }
 
 input.ilMainMenuSearch {
-	padding: .2em .5em;
+	padding: .15em .5em;
 	padding-right: 24px;
+	background-color: #FBFBFB;
 	background-image: none;
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.05) 4%, rgba(0,0,0,0) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.2)), color-stop(4%,rgba(0,0,0,0.05)), color-stop(100%,rgba(0,0,0,0)));
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.05) 4%,rgba(0,0,0,0) 100%);
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.05) 4%,rgba(0,0,0,0) 100%);
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.05) 4%,rgba(0,0,0,0) 100%);
+	background-image: linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.05) 4%,rgba(0,0,0,0) 100%);
 	font-size: .9em !important;
-	border: 1px solid #86a841;
+	border: 1px solid #718f38;
+	border-bottom-color: #86a841;
 	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.6);
 	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.6);
 	box-shadow: 0 1px 0 rgba(255,255,255,.6);
 }
+
+	input.ilMainMenuSearch:focus {
+		background-color: #fff;
+		border-color: #005133
+	}
 
 input.ilMainMenuSearchSubmit {
 	background: transparent url(images/icon-loupe.png) no-repeat center center;
