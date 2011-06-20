@@ -437,7 +437,7 @@ div.ilMainMenuSearch {
 	margin: 0;
 	position: absolute;
 	right: 3px;
-	bottom: 3px;
+	bottom: 4px;
 	z-index: 5
 }
 
@@ -574,6 +574,15 @@ div.ilMainMenu a.MMInactive:visited {
 		background-image: -o-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 76%,rgba(0,0,0,0) 100%);
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 76%,rgba(0,0,0,0) 100%);
 		background-image: linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 76%,rgba(0,0,0,0) 100%);
+	}
+	
+	div.ilMainMenu li.ilMainMenu:first-child a.MMActive {
+		-webkit-border-top-left-radius: 7px;
+		-webkit-border-bottom-left-radius: 7px;
+		-moz-border-radius-topleft: 7px;
+		-moz-border-radius-bottomleft: 7px;
+		border-top-left-radius: 7px;
+		border-bottom-left-radius: 7px;
 	}
 
 /* Breadcrumbs */
