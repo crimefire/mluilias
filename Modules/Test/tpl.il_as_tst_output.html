@@ -1,52 +1,60 @@
+
 <!-- BEGIN kiosk_message -->{MESSAGE}<!-- END kiosk_message -->
 <!-- BEGIN kiosk_options -->
 {KIOSK_HEAD}
 <!-- END kiosk_options -->
 <div id="tst_output">
-<form id="taForm" name="test_output" method="post" style="clear: both;" {ENCTYPE} action="{FORMACTION}"<!-- BEGIN onsubmit --> onsubmit="{ON_SUBMIT}"<!-- END onsubmit -->>
+<form id="taForm" class="clearfix" name="test_output" method="post" style="clear: both;" {ENCTYPE} action="{FORMACTION}"<!-- BEGIN onsubmit --> onsubmit="{ON_SUBMIT}"<!-- END onsubmit -->>
 <div id="tst_left">{LIST_OF_QUESTIONS}</div>
 <div id="tst_right">
 <!-- BEGIN enableprocessingtime -->
-<div id="workingtime"><span id="userworkingtime">{USER_WORKING_TIME}</span><span id="timeleft">{USER_REMAINING_TIME}</span></div>
-<!-- END enableprocessingtime -->
-<input type="hidden" name="formtimestamp" value="{FORM_TIMESTAMP}" />
-<table class="fullwidth_invisible">
-		<tr>
-			<td>
-<!-- BEGIN view_sidelist -->
-	<input type="image" name="cmd[togglesidelist][list]" src="{IMAGE_SIDELIST}" title="{TEXT_SIDELIST}" />
-<!-- END view_sidelist -->
-<!-- BEGIN question_status -->
-<!-- BEGIN ismarked -->
-	<input type="image" name="cmd[resetmarked][mark]" src="{IMAGE_SET}" title="{TEXT_SET}" />
-<!-- END ismarked -->
-<!-- BEGIN isnotmarked -->
-	<input type="image" name="cmd[setmarked][mark]" src="{IMAGE_UNSET}" title="{TEXT_UNSET}" />
-<!-- END isnotmarked -->
-<!-- END question_status -->
-			</td>
-			<td style="text-align: right;">
-<!-- BEGIN cancel_test -->
-				<a href="{HREF_CANCELTEXT}">{TEXT_CANCELTEST}</a>&nbsp;<a href="{HREF_IMGCANCELTEST}"><img align="middle" alt="{TEXT_ALTCANCELTEXT}" title="{TEXT_TITLECANCELTEXT}" src="{IMAGE_CANCEL}" border="0" /></a>
-<!-- END cancel_test -->
-			</td>
-		</tr>
-</table>
-
-<div class="fullwidth clearfix" id="testbuttons">
-	<!-- BEGIN prev -->
-	<input type="submit" class="submit" name="cmd[previous]" value="{BTN_PREV}" id="prevbutton" />
-	<!-- END prev -->
-	<!-- BEGIN summary -->
-	<input type="submit" class="submit" name="cmd[summary]" value="{BTN_SUMMARY}" id="summarybutton" />
-	<!-- END summary -->
-	<!-- BEGIN postpone -->
-	<input type="submit" class="submit" name="cmd[postpone]" value="{BTN_POSTPONE}" id="postponebutton" />
-	<!-- END postpone -->
-	<!-- BEGIN next -->
-	<input type="submit" class="submit" name="cmd[next]" value="{BTN_NEXT}" id="nextbutton" />
-	<!-- END next -->
+<div id="workingtime">
+	<span id="userworkingtime">{USER_WORKING_TIME}</span><span id="timeleft">{USER_REMAINING_TIME}</span>
 </div>
+<!-- END enableprocessingtime -->
+
+<input type="hidden" name="formtimestamp" value="{FORM_TIMESTAMP}" />
+
+<div class="fullwidth_invisible">
+	
+	<!-- BEGIN view_sidelist -->
+	<input type="image" name="cmd[togglesidelist][list]" src="{IMAGE_SIDELIST}" title="{TEXT_SIDELIST}" />
+	<!-- END view_sidelist -->
+	<!-- BEGIN question_status -->
+	<!-- BEGIN ismarked -->
+	<input type="image" name="cmd[resetmarked][mark]" src="{IMAGE_SET}" title="{TEXT_SET}" />
+	<!-- END ismarked -->
+	<!-- BEGIN isnotmarked -->
+	<input type="image" name="cmd[setmarked][mark]" src="{IMAGE_UNSET}" title="{TEXT_UNSET}" />
+	<!-- END isnotmarked -->
+	<!-- END question_status -->
+	
+	
+</div>
+
+<!--
+<div class="fullwidth clearfix" id="testbuttons">
+	
+	<div class="testproceed">
+		<!-- BEGIN prev -->
+		<input type="submit" class="submit" name="cmd[previous]" value="{BTN_PREV}" id="prevbutton" />
+		<!-- END prev -->
+		<!-- BEGIN next -->
+		<input type="submit" class="submit" name="cmd[next]" value="{BTN_NEXT}" id="nextbutton" />
+		<!-- END next -->
+	</div>
+	
+	<div class="questionactions">
+		<!-- BEGIN summary -->
+		<input type="submit" class="submit" name="cmd[summary]" value="{BTN_SUMMARY}" id="summarybutton" />
+		<!-- END summary -->
+		<!-- BEGIN postpone -->
+		<input type="submit" class="submit" name="cmd[postpone]" value="{BTN_POSTPONE}" id="postponebutton" />
+		<!-- END postpone -->
+	</div>
+	
+</div>
+-->
 
 <!-- BEGIN closeform --></form><!-- END closeform -->
 <table class="fullwidth">
@@ -76,20 +84,32 @@
 
 <!-- BEGIN navigation_bottom -->
 <div class="fullwidth clearfix" id="bottomtestbuttons">
-	<!-- BEGIN prev_bottom -->
-	<input type="submit" class="submit" name="cmd[previous]" value="{BTN_PREV}" id="bottomprevbutton" />
-	<!-- END prev_bottom -->
-	<!-- BEGIN summary_bottom  -->
-	<input type="submit" class="submit" name="cmd[summary]" value="{BTN_SUMMARY}" id="bottomsummarybutton" />
-	<!-- END summary_bottom -->
-	<!-- BEGIN postpone_bottom -->
-	<input type="submit" class="submit" name="cmd[postpone]" value="{BTN_POSTPONE}" id="bottompostponebutton" />
-	<!-- END postpone_bottom -->
-	<!-- BEGIN next_bottom -->
-	<input type="submit" class="submit" name="cmd[next]" value="{BTN_NEXT}" id="bottomnextbutton" />
-	<!-- END next_bottom -->
+	
+	<div class="testproceed">
+		<!-- BEGIN prev_bottom -->
+		<input type="submit" class="submit" name="cmd[previous]" value="{BTN_PREV}" id="bottomprevbutton" />
+		<!-- END prev_bottom -->
+		<!-- BEGIN next_bottom -->
+		<input type="submit" class="submit" name="cmd[next]" value="{BTN_NEXT}" id="bottomnextbutton" />
+		<!-- END next_bottom -->
+	</div>
+	
+	<div class="questionactions">
+		<!-- BEGIN summary_bottom  -->
+		<input type="submit" class="submit" name="cmd[summary]" value="{BTN_SUMMARY}" id="bottomsummarybutton" />
+		<!-- END summary_bottom -->
+		<!-- BEGIN postpone_bottom -->
+		<input type="submit" class="submit" name="cmd[postpone]" value="{BTN_POSTPONE}" id="bottompostponebutton" />
+		<!-- END postpone_bottom -->
+	</div>
 </div>
 <!-- END navigation_bottom -->
+	
+	<p id="testcancel">
+		<!-- BEGIN cancel_test -->
+		<a href="{HREF_CANCELTEXT}">{TEXT_CANCELTEST}</a>&nbsp;<a href="{HREF_IMGCANCELTEST}"><img align="middle" alt="{TEXT_ALTCANCELTEXT}" title="{TEXT_TITLECANCELTEXT}" src="{IMAGE_CANCEL}" border="0" /></a>
+		<!-- END cancel_test -->
+	</p>
 
 <p></p>
 
