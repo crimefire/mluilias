@@ -251,9 +251,12 @@ textarea:focus {
 input.submit, a.submit,
 input.ilEditSubmit,
 a.submit:hover, input.submit:hover,
-input.ilEditSubmit:hover {
+input.ilEditSubmit:hover,
+a.submit .small, a.submit:hover .small {
 	background-color: transparent;
     background-image: none;
+    border: none;
+    font-size: 100%;
 }
 
 /* Start our own button styles */
@@ -284,12 +287,27 @@ input.ilEditSubmit {
 	font-size: .9em;
 }
 
+	a.submit .small {
+		font-size: .9em;
+	}
+
 a.submit:hover, input.submit:hover,
 input.ilEditSubmit:hover {
+	background-color: #dfeae7;
+	border: 1px solid #c5cfcf;
 	border-bottom-color: #b0b9bb;
 	background-color: #dfeae7;
 	color: #444444;
+	font-size: .9em;
+	display: inline-block;
+	padding: .2em 1em;
+	line-height: 20px;
+	font-weight: bold;
 }
+
+	a.submit:hover .small {
+		font-size: .9em;
+	}
 
 input.submit:active,
 a.submit:active,
