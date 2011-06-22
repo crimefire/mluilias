@@ -1289,13 +1289,15 @@ div.ilMemberViewMainHeader h4 {
 		padding-top: .5em
 	}
 	
-	.ilLoginPage input {
+	.ilLoginPage input,
+	.ilLoginPage input[type="submit"]:hover {
 		width: 60%;
 		float: right;
 		padding: .5em
 	}
 	
-	.ilLoginPage input[type="submit"] {
+	.ilLoginPage input[type="submit"],
+	.ilLoginPage input[type="submit"]:hover {
 		width: 100%;
 		float: none;
 		margin: 1em 0
