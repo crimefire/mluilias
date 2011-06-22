@@ -700,7 +700,8 @@ a.subtabactive {
 
 a.subtabactive:hover,
 a.subtabinactive:hover {
-	text-decoration: none
+	text-decoration: none;
+	padding: .5em
 }
 
 /* Tree View */
