@@ -232,7 +232,7 @@ label {
 }
 
 select {
-	font-size: .8em;
+	font-size: .9em;
 	font-weight: normal
 }
 
@@ -792,24 +792,33 @@ table.std {
 /* Smoooooth & Rooooomy tables */
 
 table.std, table.ilForm,
-.ilCLIRow1, .ilCLIRow2 {
+.ilCLIRow1, .ilCLIRow2,
+.tblrow1, .tblrow2 {
 	background: #fff;
-	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.02) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.02)));
-	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.02) 100%);
-	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.02) 100%);
-	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.02) 100%);
-	background: linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.02) 100%);
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.02) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,0.02)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.02) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.02) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.02) 100%);
+	background: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.02) 100%);
 	padding: 1em 0;
 }
 
-.ilCLIRow1, .ilCLIRow2 {
+.ilCLIRow1, .ilCLIRow2,
+td.ilCLI {
 	display: block;
 }
 
-	td.ilCLI {
-		display: block
-	}
+/* the rows of "real" tables */
+.tblrow1, .tblrow2 {
+	font-size: .9em;
+	line-height: 1.3em
+}
+
+tr.tblheader {
+	font-size: .8em;
+	line-height: 1.3em
+}
 
 th.il_InfoScreenSection,
 div.ilTableHeaderTitle {
@@ -848,6 +857,7 @@ h3.ilPDBlockSubHeader {
 
 /* Make a lot of stuff borderless */
 div.ilTableOuter,
+table.std,
 table.ilForm,
 table.ilContainerBlock,
 table.calmini,
@@ -857,7 +867,8 @@ td.calminiprev,
 div.ilc_page_tnav_TopNavigation, th.ilc_page_tnav_TopNavigation,
 table.ilc_page_cont_PageContainer, th.ilc_page_cont_PageContainer,
 div.ilc_page_bnav_BottomNavigation, th.ilc_page_bnav_BottomNavigation,
-.questionPrintview {
+.questionPrintview,
+th.option, td.option {
 	border: none !important;
 }
 
@@ -1170,6 +1181,10 @@ div.ilc_question_Standard {
 
 /* Kalender
 --------------------------------*/
+
+table.calmini {
+	font-size: 1.1em;
+}
 
 td.calminiweek, th.calminiweek,
 .calminiheader th.calmini {
