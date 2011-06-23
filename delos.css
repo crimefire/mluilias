@@ -1,3 +1,7 @@
+/* Original delos.css */
+/* untouched, except for some outcommented layout background images */
+
+
 /* -- for link pseudo-classes, respect order: Link, Visited, Hover, Active -- 3120 */
 
 body {
@@ -12,8 +16,8 @@ body, input, textarea {
 }
 
 body.std {
-	background-image: url(images/frame_back.gif);
-	background-repeat: repeat-x;
+	/*background-image: url(images/frame_back.gif);
+	background-repeat: repeat-x;*/
 	background-color: #f0f0f0;
 }
 
@@ -30,27 +34,27 @@ div.ilFrame{
 
 /* --- creates bug in IE6, if hasLayout not given (zoom: 1;) */
 div.ilFrameH{
-	background-image: url(images/head_back.gif);
-	background-repeat: repeat-x;
+	/*background-image: url(images/head_back.gif);
+	background-repeat: repeat-x;*/
 	background-color: #a7d3ff;
     zoom: 1;
 }
 
 div.ilFrameTL{
-	background-image: url(images/tl.gif);
-	background-repeat: no-repeat;
+	/*background-image: url(images/tl.gif);
+	background-repeat: no-repeat;*/
 }
 
 div.ilFrameTR{
-	background-image: url(images/tr.gif);
+	/*background-image: url(images/tr.gif);
 	background-repeat: no-repeat;
-	background-position: top right;
+	background-position: top right;*/
 }
 
 div.ilFrameBR{
-	background-image: url(images/brbw.gif);
+	/*background-image: url(images/brbw.gif);
 	background-repeat: no-repeat;
-	background-position: bottom right;
+	background-position: bottom right;*/
 	padding: 0px 10px 0px 10px;
 }
 
@@ -555,8 +559,8 @@ input.ilHFormHighlighted
 
 table.ilForm
 {
-	background-image: url(images/form_back.gif);
-	background-repeat: repeat-y;
+	/*background-image: url(images/form_back.gif);
+	background-repeat: repeat-y;*/
 	background-color:#F6F6F6;
 	border-spacing:0px;
 	border-collapse:collapse;
@@ -682,8 +686,8 @@ td.il_InfoScreenPropertyValue
 /* Explorer */
 
 body.il_Explorer {
-	background-image: url(images/frame_back.gif);
-	background-repeat: repeat-x;
+	/*background-image: url(images/frame_back.gif);
+	background-repeat: repeat-x;*/
 	background-color: #f0f0f0;
 	margin:0px;
 	font-size:0.9em;
@@ -702,9 +706,9 @@ div.ilExplorerFrame {
 }
 
 td.ilExpH {
-	background-image: url(images/trbw.gif);
+	/*background-image: url(images/trbw.gif);
 	background-repeat: no-repeat;
-	background-position: top right; 
+	background-position: top right; */
 }
 
 div.il_Explorer
@@ -712,9 +716,9 @@ div.il_Explorer
 	margin:0px;
 	padding:3px;
 	min-height: 468px;
-	background-image: url(images/blbw.gif);
+	/*background-image: url(images/blbw.gif);
 	background-repeat: no-repeat;
-	background-position: bottom left;
+	background-position: bottom left;*/
 	padding: 10px 5px 15px 5px; 
 }
 
@@ -728,9 +732,9 @@ div.ilExpH{
 td.ilExpBody{
 	border-top: 1px solid #E0E0E0;
 	background-color: #FAFAFA;
-	background-image: url(images/brbw.gif);
+	/*background-image: url(images/brbw.gif);
 	background-repeat: no-repeat;
-	background-position: bottom right; 
+	background-position: bottom right; */
 }
 
 h1.ilExplorerHead
@@ -1184,9 +1188,9 @@ input.submit, a.submit, a.submit:hover
 	font-weight:normal;
 	line-height:17px; /* Safari */
 	background-color: #FFFFFF;
-	background-image: url(images/ButtonsBack.gif);
+	/*background-image: url(images/ButtonsBack.gif);
 	background-position: bottom;
-	background-repeat:repeat-x;
+	background-repeat:repeat-x;*/
 	color:#335599;
 	border-width:1px;
 	border-color: #BABABA;
@@ -1219,9 +1223,9 @@ input.submit_disabled, a.submit_disabled, a.submit_disabled:hover {
 
 a.ilEditSubmit {
 	background-color: #FFFFFF;
-	background-image: url(images/ButtonsBack.gif);
+	/*background-image: url(images/ButtonsBack.gif);
 	background-position: bottom;
-	background-repeat:repeat-x;
+	background-repeat:repeat-x;*/
 	padding: 2px;
 	margin: 0px;
 	border-width:1px;
@@ -1245,9 +1249,9 @@ input.ilEditSubmit {
 	cursor:pointer;
 	
 	background-color: #FFFFFF;
-	background-image: url(images/ButtonsBack.gif);
+	/*background-image: url(images/ButtonsBack.gif);
 	background-position: bottom;
-	background-repeat:repeat-x;
+	background-repeat:repeat-x;*/
 	border-width:1px;
 	border-top-color: #BABABA;
 	border-left-color: #BABABA;
@@ -1930,9 +1934,9 @@ a.ilLogin, a.ilLogin:visited
 /* MainMenu */
 div.ilMainMenu
 {
-	background-image: url(images/MainMenuBack.gif);
+	/*background-image: url(images/MainMenuBack.gif);
 	background-repeat: repeat-x;
-	background-position: bottom;	
+	background-position: bottom;	*/
 	margin: 0px;
 	padding: 1px 0px 6px 20px;
 	line-height: normal;
@@ -2006,9 +2010,9 @@ input.ilMainMenuSearch {
 	padding: 1px;
 	padding-right: 20px;
 	margin: 0px;
-	background-image: url(images/icon_seas_s.gif);
+	/*background-image: url(images/icon_seas_s.gif);
 	background-repeat: no-repeat;
-	background-position: center right;
+	background-position: center right;*/
 	background-color: #FFFFFF;
 	min-height:16px;
 }
@@ -2017,9 +2021,9 @@ input.ilMainMenuSearchSubmit
 {
 	margin: 0px;
 	background-color: #FFFFFF;
-	background-image: url(images/ButtonsBack.gif);
+	/*background-image: url(images/ButtonsBack.gif);
 	background-position: bottom;
-	background-repeat:repeat-x;
+	background-repeat:repeat-x;*/
 	color:#2255a0;
 	border-width:1px;
 	border-color: #BABABA;
@@ -2072,9 +2076,9 @@ div.ilTabContentInner
 
 div.ilFrameBL
 {
-	background-image: url(images/blbw.gif);
+	/*background-image: url(images/blbw.gif);
 	background-repeat: no-repeat;
-	background-position: bottom left;
+	background-position: bottom left;*/
 	background-color: #F9F9F9;
 }
 
@@ -2856,8 +2860,8 @@ div.ilProfile {
 	width: 450px;
 	margin-left:auto;
 	margin-right:auto;
-	background-image: url(images/form_back.gif);
-	background-repeat: repeat-y;
+	/*background-image: url(images/form_back.gif);
+	background-repeat: repeat-y;*/
 	background-color:#F6F6F6;
 	border-width:1px;
 	border-style:solid;

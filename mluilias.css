@@ -99,6 +99,30 @@ input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5
 
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
+/* delos layout images not found fix */
+td.ilBlockHeader, td.ilBlockHeaderBig,
+th.ilContainerBlockHeader,
+div.ilTableHeaderTitleBlock,
+.il_VAccordionHead, .il_HAccordionHead,
+div.il_Explorer,
+div.ilExpH,
+td.ilExpBody,
+div.ilFrameBL,
+div.ilFrameBR,
+div.ilFrameTR,
+div.ilFrameTL,
+input.ilMainMenuSearch,
+body.std,
+body.il_Explorer,
+div.ilMainMenu,
+div.ilProfile,
+input.submit, a.submit, a.submit:hover,
+a.ilEditSubmit,
+input.ilEditSubmit,
+input.ilMainMenuSearchSubmit {
+	background-image: none
+}
+
 /* END minimal base styles */
 
 /** =============================
@@ -922,17 +946,6 @@ h3.ilFormHeader + div.ilFormInfo {
 	font-size: 1em
 }
 
-/* delos layout images not found fix */
-
-td.ilBlockHeader, td.ilBlockHeaderBig,
-th.ilContainerBlockHeader,
-div.ilTableHeaderTitleBlock,
-.il_VAccordionHead, .il_HAccordionHead,
-div.il_Explorer,
-div.ilExpH,
-td.ilExpBody {
-	background-image: none
-}
 
 /* Global Footer
 --------------------------------*/
