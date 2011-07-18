@@ -488,6 +488,10 @@ div.ilMainMenuSearch {
 	z-index: 5
 }
 
+	.oldie div.ilMainMenuSearch {
+		bottom: 20px;
+	}
+
 form.ilMainMenuSearch > div {
 	position: relative !important;
 	right: 0 !important;
