@@ -390,21 +390,26 @@ div.ilMainHeader div:first-child img {
 	-moz-opacity: 0.5;
 	-khtml-opacity: 0.5;
 	opacity: 0.5;
-	filter: alpha(opacity=50);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
+
+	.no-opacity div.ilMainHeader div:first-child img {
+		filter: alpha(opacity=50);
+	}
 
 img.mlu-siegel {
 	-moz-opacity: 0.3;
 	-khtml-opacity: 0.3;
 	opacity: 0.3;
-	filter: alpha(opacity=30);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
 	-webkit-transition: opacity .4s ease-in-out;
 	-moz-transition: opacity .4s ease-in-out;
 	-o-transition: opacity .4s ease-in-out;
 	transition: opacity .4s ease-in-out;
 }
+
+	.no-opacity img.mlu-siegel {
+		filter: alpha(opacity=30);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	}
 
 a:hover img.mlu-siegel {
 	-moz-opacity: 1;
