@@ -1478,6 +1478,11 @@ div.ilMemberViewMainHeader h4 {
 .block {display: block}
 .inlineblock {display: inline-block}
 
+/* Fix for BackTab.gif errors */
+a.backtab, a.backtab:hover,
+a.back2tab, a.back2tab:hover {
+	background-image: none !important;
+}
 
 /* Responsive design. 
 --------------------------------*/
