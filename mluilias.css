@@ -761,6 +761,9 @@ a.ilTreeView {
 	-moz-border-radius-bottomright: 5px;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
+	width: 15px;
+	height: 51px;
+	display: block;
 }
 
 	a.ilTreeView:hover {
