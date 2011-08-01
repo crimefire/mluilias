@@ -742,6 +742,47 @@ a.ilTreeView {
 	position: fixed;
 	left: 0;
 	top: 200px;
+	background: #9bc34b;
+	background: #9bc34b -moz-linear-gradient(top, #a1cb4f 0%, #9bc34b 100%);
+	background: #9bc34b -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a1cb4f), color-stop(100%,#9bc34b));
+	background: #9bc34b -webkit-linear-gradient(top, #a1cb4f 0%,#9bc34b 100%);
+	background: #9bc34b -o-linear-gradient(top, #a1cb4f 0%,#9bc34b 100%);
+	background: #9bc34b -ms-linear-gradient(top, #a1cb4f 0%,#9bc34b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A1CB4F', endColorstr='#9BC34B',GradientType=0 );
+	background: #9bc34b linear-gradient(top, #a1cb4f 0%,#9bc34b 100%);
+	border: 1px solid #86a841;
+	border-bottom-color: #718f38;
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+	box-shadow: 0 1px 4px rgba(0,0,0,.2);
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+	a.ilTreeView:hover {
+		background: #8cb144;
+		left: 0;
+	}
+
+a.ilTreeView:after {
+	border: 10px solid #fff;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	height: 0.1px;
+	width: 14px;
+	position: absolute;
+	left: 0;
+	top: 15px;
+	content: "";
+}
+
+a.ilTreeView img {
+	display: none;
 }
 
 /* Main Content */
