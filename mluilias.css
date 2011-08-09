@@ -856,6 +856,11 @@ table.std {
 	background: #fff
 }
 
+table.fullwidth {
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
 /* Smoooooth & Rooooomy tables */
 
 table.std, table.ilForm,
@@ -877,9 +882,18 @@ td.ilCLI {
 }
 
 /* the rows of "real" tables */
-.tblrow1, .tblrow2 {
+.tblrow1, .tblrow2, table.std tr {
 	font-size: .9em;
 	line-height: 1.3em
+}
+
+/*the cells of "real" tabels*/
+td.std, th.std {
+	padding: 8px 6px;
+}
+
+td.option, td.option_value {
+	padding: 10px 4px;
 }
 
 tr.tblheader {
