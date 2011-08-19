@@ -799,11 +799,6 @@ div.ilTabContentInner {
 	padding: 2%;
 }
 
-table.il_InfoScreen,
-table.il_Block, .ilOverlay  {
-	border: none
-}
-
 td.il_LeftColumn {
 	padding-right: 20px;
 }
@@ -937,6 +932,8 @@ h3.ilPDBlockSubHeader {
 }
 
 /* Make a lot of stuff borderless */
+table.il_InfoScreen,
+table.il_Block, .ilOverlay,
 div.ilTableOuter,
 table.std,
 table.ilForm,
@@ -951,6 +948,10 @@ div.ilc_page_bnav_BottomNavigation, th.ilc_page_bnav_BottomNavigation,
 .questionPrintview,
 th.option, td.option {
 	border: none !important;
+}
+
+table.ilc_table_StandardTable {
+	border: 0px solid #444;
 }
 
 div.il_Description,
