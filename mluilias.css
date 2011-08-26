@@ -950,8 +950,35 @@ th.option, td.option {
 	border: none !important;
 }
 
-table.ilc_table_StandardTable {
-	border: 0px solid #444;
+/* nasty border fix for content tables */
+
+.ilc_page_cont_PageContainer table.ilc_table_StandardTable[border="1px"],
+table.ilc_table_StandardTable[border="1px"] td {
+	border: 1px solid #ccc;
+}
+
+.ilc_page_cont_PageContainer table.ilc_table_StandardTable[border="2px"],
+table.ilc_table_StandardTable[border="2px"] td {
+	border: 2px solid #ccc;
+}
+
+.ilc_page_cont_PageContainer table.ilc_table_StandardTable[border="3px"],
+table.ilc_table_StandardTable[border="3px"] td {
+	border: 3px solid #ccc;
+}
+
+.ilc_page_cont_PageContainer table.ilc_table_StandardTable[border="4px"],
+table.ilc_table_StandardTable[border="4px"] td {
+	border: 4px solid #ccc;
+}
+
+.ilc_page_cont_PageContainer table.ilc_table_StandardTable[border="5px"],
+table.ilc_table_StandardTable[border="5px"] td {
+	border: 5px solid #ccc;
+}
+
+.ilc_page_cont_PageContainer table.ilc_table_StandardTable td {
+	padding: 2%;
 }
 
 div.il_Description,
@@ -986,12 +1013,18 @@ div.il_ContainerItemCommands2 {
 /* The secondary font style */
 
 div.il_ItemProperties,
-div.ilFormInfo {
+div.ilFormInfo,
+table.ilc_table_StandardTable caption {
 	font-family: Georgia, "Times New Roman", serif;
 	font-style: italic;
-	border-top: 1px solid #f3f3f3;
 	padding-top: .5em;
 	margin-top: .3em;
+	
+}
+
+div.il_ItemProperties,
+div.ilFormInfo {
+	border-top: 1px solid #f3f3f3;
 	font-size: .9em;
 }
 
