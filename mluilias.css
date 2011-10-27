@@ -852,7 +852,7 @@ table.std {
 }
 
 table.fullwidth {
-	table-layout: fixed;
+	table-layout: auto;
 	word-wrap: break-word;
 }
 
