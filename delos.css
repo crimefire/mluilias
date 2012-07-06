@@ -1,8 +1,11 @@
 /* Original delos.css */
 /* untouched, except for some outcommented layout background images */
 
-
 /* -- for link pseudo-classes, respect order: Link, Visited, Hover, Active -- 3120 */
+
+html {
+	
+}
 
 body {
 	color:#222222;
@@ -22,7 +25,7 @@ body.std {
 }
 
 div.ilFrame{
-	padding:5px;
+	padding:0px;
 }
 
 .registration {
@@ -36,25 +39,17 @@ div.ilFrame{
 div.ilFrameH{
 	/*background-image: url(images/head_back.gif);
 	background-repeat: repeat-x;*/
-	background-color: #a7d3ff;
+	background-color: #F0F0F0;
     zoom: 1;
 }
 
 div.ilFrameTL{
-	/*background-image: url(images/tl.gif);
-	background-repeat: no-repeat;*/
 }
 
 div.ilFrameTR{
-	/*background-image: url(images/tr.gif);
-	background-repeat: no-repeat;
-	background-position: top right;*/
 }
 
 div.ilFrameBR{
-	/*background-image: url(images/brbw.gif);
-	background-repeat: no-repeat;
-	background-position: bottom right;*/
 	padding: 0px 10px 0px 10px;
 }
 
@@ -265,8 +260,8 @@ th.il_invisible, td.il_invisible {
 	color:#222222;
 	font-weight:bold;
 	background-color: #EDEDED;
-	background-image: url(images/TableHeader.gif);
-	background-repeat:repeat-x;
+	/*background-image: url(images/TableHeader.gif);
+	background-repeat:repeat-x;*/
 }
 
 tr.tbltitle {
@@ -393,7 +388,6 @@ a.il_ContainerItemCommand:link, a.il_ContainerItemCommand:visited
 {
 	font-size: 80%;
 	text-decoration: none;
-	border-bottom: 1px dotted #2020C0;
 	margin: 0px 3px 0px 0px;
 	white-space: nowrap;
 	font-weight: normal;
@@ -402,7 +396,7 @@ a.il_ContainerItemCommand:link, a.il_ContainerItemCommand:visited
 a.il_ContainerItemCommand2:hover,
 a.il_ContainerItemCommand:hover
 {
-	border-bottom: 1px solid #000000;
+	text-decoration: underline;
 }
 
 div.il_ContainerItemCommands2
@@ -478,29 +472,36 @@ span.il_ItemProperty
 
 /* Accordions */
 .il_VAccordionContainer, .il_HAccordionContainer {
-	border-bottom:1px solid #9EADBA;
 }
 
 .il_VAccordionHead, .il_HAccordionHead {
 	padding: 3px;
-	background-color: #F8F8F8;
+	background-color: #F3F3F3;
 	text-align:left;
-	border:1px solid #9EADBA;
-	border-bottom-width:0px;
+	border:1px solid #EAEAEA;
 	cursor: pointer;
-	background-image: url(images/block_top.gif);
-	background-repeat: repeat-x;
+	color:#3444aa;
+	font-size: 110%;
+	padding-left: 30px;
+	background-image: url(images/tree_col.png);
+	background-repeat: no-repeat;
+	background-position: 7px 7px;
 }
 
 .il_VAccordionContent, .il_HAccordionContent {
-	padding: 3px;
-	border:1px solid #9EADBA;
-	border-bottom-width:0px;
+}
+
+.il_VAccordionInnerContainer {
+	margin-bottom: 10px;
 }
 
 .il_HAccordionHead:hover, .il_VAccordionHead:hover {
-	background-image: none;
 	background-color: #FFFF99;
+}
+
+.il_HAccordionHeadActive, .il_VAccordionHeadActive {
+	background-image: url(images/tree_exp.png);
+	background-color: #FFFFC9;
 }
 
 /* SCORM styles */
@@ -566,14 +567,14 @@ table.ilForm
 	border-collapse:collapse;
 	border-width:1px;
 	border-style:solid;
-	border-color:#D0D5EA;
+	border-color:#EAEAEA;
 }
 
 td.ilFormHeader, td.ilFormFooter
 {
 	background-color:#E3E3E3;
-	background-image: url(images/form_top_back.gif);
-	background-repeat: repeat-y;
+	/*background-image: url(images/form_top_back.gif);
+	background-repeat: repeat-y;*/
 	padding: 4px 5px 1px 5px;
 	font-size:90%;
 	color: #303030;
@@ -650,14 +651,15 @@ table.il_InfoScreen
 	border-color:#D6D6D6;
 }
 
-th.il_InfoScreen
+
+div.ilInfoScreenSec
 {
-	text-align:left;
+	padding: 10px;
 }
 
-h3.il_InfoScreenSection,th.il_InfoScreenSection
+div.ilInfoScreenSec > h3
 {
-	margin: 18px 10px 8px 10px;
+	margin: 8px 0px 14px 0px;
 	border-bottom-width:1px;
 	border-bottom-style:solid;
 	border-bottom-color:#D6D6D6;
@@ -675,6 +677,7 @@ td.il_InfoScreenProperty
 	padding: 6px 10px 6px 4px;
 	vertical-align: top;
 	color:#505050;
+	width: 200px;
 }
 
 td.il_InfoScreenPropertyValue
@@ -685,14 +688,6 @@ td.il_InfoScreenPropertyValue
 
 /* Explorer */
 
-body.il_Explorer {
-	/*background-image: url(images/frame_back.gif);
-	background-repeat: repeat-x;*/
-	background-color: #f0f0f0;
-	margin:0px;
-	font-size:0.9em;
-}
-
 table.ilExplorer {
 	width:100%;
 	background-color: #F6F6F6;
@@ -702,29 +697,19 @@ table.ilExplorer {
 }
 
 div.ilExplorerFrame {
-	padding: 5px 5px;
 }
 
 td.ilExpH {
-	/*background-image: url(images/trbw.gif);
-	background-repeat: no-repeat;
-	background-position: top right; */
 }
 
 div.il_Explorer
 {
 	margin:0px;
-	padding:3px;
 	min-height: 468px;
-	/*background-image: url(images/blbw.gif);
-	background-repeat: no-repeat;
-	background-position: bottom left;*/
 	padding: 10px 5px 15px 5px; 
 }
 
 div.ilExpH{
-	background-image: url(images/tlbw.gif);
-	background-repeat: no-repeat;
 	padding-top: 48px;
 	min-height: 35px;
 }
@@ -732,9 +717,6 @@ div.ilExpH{
 td.ilExpBody{
 	border-top: 1px solid #E0E0E0;
 	background-color: #FAFAFA;
-	/*background-image: url(images/brbw.gif);
-	background-repeat: no-repeat;
-	background-position: bottom right; */
 }
 
 h1.ilExplorerHead
@@ -865,25 +847,52 @@ div.il_Header, a#il_mhead_t_focus
 
 h1.ilHeader
 {
-	margin: 0px;
-	padding: 15px 10px 0px 50px;
+	margin: 0;
+	padding: 15px 0px 5px 0px;
+	font-size: 140%;
+	font-weight: normal;
+	border-bottom: 1px solid #EAEAEA;
+}
+h1.ilHeaderHasIcon
+{
+	margin-left: 50px;
 }
 span.ilHeader
 {
+}
+div.ilHeadAction
+{
+	float: right;
+	margin-top: 21px;
+}
+div.ilHeadAction  .prop
+{
+	padding-right: 10px;
+}
+div.ilHeadAction a:hover
+{
+	text-decoration: none;
 }
 div.ilHeaderDesc
 {
 	padding-left: 51px;
 	font-size: 80%;
-	padding-top: 3px;
+	padding-top: 5px;
 	color: #808080;
+}
+
+div.ilHeaderAlert
+{
+	padding-left: 51px;
+	font-size: 80%;
+	padding-top: 5px;
+	color: #C04000;
 }
 
 div.il_HeaderInner
 {
-	float:left;
-	margin: 0px;
-	padding: 0px 10px 20px 10px;
+	margin-bottom: 10px;
+	padding: 13px 10px 15px 10px;
 	color:#222222;
 }
 
@@ -912,12 +921,13 @@ a.ilMainHeader, a.ilMainHeader:hover
 
 div.ilLogin
 {
-	padding:2px 20px 3px 10px;
+	padding:32px 20px 3px 10px;
+	padding:21px 20px 3px 10px;
 	margin-top:0px;
 	margin-bottom:0px;
 	white-space: nowrap;
-	text-align:right;
-	font-size:80%;
+	float:right;
+	font-size:85%;
 }
 
 
@@ -1127,6 +1137,16 @@ a.light:link, a.light:visited {
 a.light:hover {
 	color:#000000;
 }
+
+a.nostyle:link, a.nostyle:visited {
+	text-decoration: none;
+	color:#000000;
+}
+
+a.nostyle:hover {
+	color:#000000;
+}
+
 
 /* ------------------- mail links ----------- */
 a.mailread, a.mailread:visited
@@ -1355,7 +1375,7 @@ img.imgtab {
 	margin:0px;
 }
 
-/* --- Editor styles ---*/
+/* --- Services/COPage ---*/
 
 div.il_droparea
 {
@@ -1363,8 +1383,8 @@ div.il_droparea
 	border-width: 1px;
 	border-color: #D0D0D0;
 	font-size: 1px;
-	background-image: url(images/drop_back.gif);
-	background-repeat: repeat;
+	/*background-image: url(images/drop_back.gif);
+	background-repeat: repeat;*/
 	padding: 0px 0px;
 	text-align: center;
 	height: 12px;
@@ -1377,8 +1397,8 @@ div.il_droparea_active
 	border-width: 1px;
 	border-color: #000000;
 	font-size: 1px;
-	background-image: url(images/drop_back_active.gif);
-	background-repeat: repeat;
+	/*background-image: url(images/drop_back_active.gif);
+	background-repeat: repeat;*/
 	text-align: center;
 	height: 12px;
 }
@@ -1390,8 +1410,8 @@ div.il_droparea_valid_target
 	border-width: 1px;
 	border-color: #000000;
 	font-size: 1px;
-	background-image: url(images/drop_back.gif);
-	background-repeat: repeat;
+	/*background-image: url(images/drop_back.gif);
+	background-repeat: repeat;*/
 	text-align: center;
 	height: 12px;
 }
@@ -1427,7 +1447,7 @@ div.il_editarea_selected
 {
 	border-style: solid;
 	border-width: 2px;
-	border-color: #A0A0A0;
+	border-color: #00E253;
 }
 
 div.il_editarea_disabled_selected
@@ -1504,6 +1524,117 @@ div.ilEditVAccordICont
 {
 	padding: 10px;
 	background-color: #FFFFFF;
+}
+
+div.ilTinyMenuSection
+{
+	float:left;
+	white-space:nowrap;
+	border-right: solid 1px #E0E0E0;
+	padding: 0px 10px 4px 0px;
+	margin-right: 10px;
+}
+
+#ilTinyMenuButtons
+{
+	padding-bottom: 15px;
+	zoom:1;
+}
+
+#iltinymenu .bd div.last
+{
+	float:left;
+	white-space:nowrap;
+	padding: 0px 10px 2px 0px;
+	border-right: 0;
+	margin: 0;
+}
+
+#iltinymenu .bd div .small
+{
+	color: #909090;
+	font-style: italic;
+}
+
+#ilsaving
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	text-decoration: blink;
+}
+
+.ilTinyMenuDropDown span
+{
+	padding: 2px 0px 0px 5px;
+	width: 75px;
+	overflow: hidden;
+	display: inline-block;
+	line-height: 1em;
+}
+
+a.ilTinyMenuDropDown
+{
+	display: inline-block;
+	padding: 0px 2px 1px 0px;
+}
+
+#ilEditorTD p
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* Page TOC */
+
+div.ilc_page_toc_PageTOC
+{
+	font-size: 90%;
+	padding: 5px 5px 10px 5px;
+	background-color:#FAFAFA;
+	border:1px solid #F0F0F0;
+	float: left;
+}
+
+h1.ilc_page_toc_PageTOCHead
+{
+	margin: 0px;
+	font-size: 100%;
+	padding: 0px;
+	font-weight: bold;
+	text-align: center;
+}
+
+ul.ilc_page_toc_PageTOCList
+{
+	margin: 0px 0px 0px 10px;
+	padding: 0px;
+	list-style: none;
+}
+
+li.ilc_page_toc_PageTOCItem
+{
+	margin: 0px;
+	padding: 0px 0px;
+	white-space: nowrap;
+	margin-top: 5px;
+}
+
+a.ilc_page_toc_PageTOCLink
+{
+	color:#0033AA;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a.ilc_page_toc_PageTOCLink:hover
+{
+	color:#000000;
+}
+
+a.ilc_page_toc_PageTOCLink:visited
+{
+	color: blue;
 }
 
 /* ------------------ blind image - spacer gif --------------
@@ -1769,7 +1900,7 @@ table.ilc_media
 
 h1.il_LMHead
 {
-	margin: 6px 15px 6px 15px;
+	margin: 12px 15px 6px 15px;
 	font-size: 120%;
 	font-weight: normal;
 }
@@ -1910,11 +2041,20 @@ div.il_SearchFragment
 /* CHANGES */
 
 
-div.ilMainHeader
-{
+div.ilMainHeader {
 	right: 0px;
-	min-height: 50px;
-	padding-top: 8px;
+	min-height: 35px;
+	padding: 0px;
+}
+
+div.ilMainMenuSection {
+	/*background-repeat: repeat-x;
+	background-image: url(images/mm_back.gif);*/
+	min-height:31px;
+}
+
+div.ilMainMenuHeadSection {
+	
 }
 
 div.ilMemberViewMainHeader
@@ -1932,15 +2072,18 @@ a.ilLogin, a.ilLogin:visited
 }
 
 /* MainMenu */
+div.ilMainMenuSection
+{
+	
+}
+	
 div.ilMainMenu
 {
-	/*background-image: url(images/MainMenuBack.gif);
 	background-repeat: repeat-x;
-	background-position: bottom;	*/
-	margin: 0px;
-	padding: 1px 0px 6px 20px;
+	background-position: bottom;	
+	margin-top: 0px;
+	padding: 0px 0px 0px 20px;
 	line-height: normal;
-	clear: both;
 }
 ul.ilMainMenu
 {
@@ -1954,45 +2097,70 @@ li.ilMainMenu
 {
 	float:left;
 	margin: 0px;
-	padding: 0px;
+	padding-top: 0px;
+	height: 31px;
+	border-left: 1px solid #d8ebff;
+	border-left: 1px solid #a3c8ff;
+	border-right: 1px solid #a3c8ff;
+}
+
+span.MMSpan
+{
+	display: block;
 }
 
 a.MMInactive:link, a.MMInactive:visited
 {
-	color:#FFFFFF;
-    padding: 0px 0px;
-	font-size: 90%;
+	display: block;
+	color:#003388;
+	font-size: 85%;
 	text-decoration:none;
-	margin: 0px 15px 5px 0px;
+	line-height: 26px;
+	padding: 0px 10px 3px 10px;
+	margin: 0px 0px 2px 0px;
 	font-weight: normal;
 	white-space: nowrap;
+	margin-left: -1px;
+	margin-top: 1px;
+	/*background-repeat: repeat-x;
+	background-image: url(images/mm_back2.gif);*/
 }
 
 a.MMInactive:hover
 {
-	color: #8CC6FF;
+	color:#000000;
 	text-decoration:none;
+	background-color: #d0e8ff;
+	/*background-repeat: repeat-x;
+	background-image: url(images/mm_back3.gif);*/
 }
 
 a.MMActive:link, a.MMActive:visited
 {
-	color: #8CC6FF;
-    padding: 0px 0px;
-	font-size: 90%;
+	display: block;
+	color:#003388;
+	font-size: 85%;
 	text-decoration:none;
-	margin: 0px 15px 5px 0px;
+	line-height: 26px;
+	padding: 0px 10px 3px 10px;
+	margin: 0px 0px 2px 0px;
 	font-weight: normal;
 	white-space: nowrap;
+	background-color: #d0e8ff;
+	margin-left: -1px;
+	margin-top: 1px;
+	/*background-repeat: repeat-x;
+	background-image: url(images/mm_back3.gif);*/
 }
 
 a.MMActive:hover
 {
+	color:#000000;
 	text-decoration:none;
 }
 
 div.ilMainMenuSearch {
-	text-align: right;
-	margin: 3px 15px 0px 15px;
+	margin: 5px 20px 0px 3px;
 }
 
 form.ilMainMenuSearch
@@ -2036,15 +2204,41 @@ input.ilMainMenuSearchSubmit
 	display: inline-block;
 }
 
+span.ilMMStatus, span.ilHActProp {
+	position: absolute;
+	font-size: 0.80em;
+	font-weight: bold;
+	margin-top: -3px;
+	margin-left: -3px;
+	background-color: #D06000;
+	color: #F0F0F0;
+	padding: 0px 3px 1px 3px;
+	border-radius: 8px;
+	box-shadow: 1px 1px 1px #505050;
+}
+
+span.ilHActProp {
+	margin-left: -4px;
+	font-size: 0.70em;
+	font-weight: normal;
+	border: 1px solid #E0E0E0;
+	color: #909090;
+	background-color: #F3F3F3;
+	box-shadow: 1px 1px 1px #B0B0B0;
+}
+
 /* Main Menu Top Title */
 div.ilTopTitle
 {
-	font-size: 120%;
 	color: #335599;
-	letter-spacing: 0.05em;
-	word-spacing: -0.1em;
-	white-space: nowrap;
-	padding-top: 12px
+    font-size: 120%;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    padding: 31px 0 0 20px;
+    padding: 16px 0 0 25px;
+    white-space: nowrap;
+    word-spacing: -0.1em;
+    float: left;
 }
 input.ilOpenIDBox
 {
@@ -2076,10 +2270,8 @@ div.ilTabContentInner
 
 div.ilFrameBL
 {
-	/*background-image: url(images/blbw.gif);
-	background-repeat: no-repeat;
-	background-position: bottom left;*/
 	background-color: #F9F9F9;
+	padding-top: 5px;
 }
 
 
@@ -2102,7 +2294,6 @@ ul.il_Tab
 	list-style:none;
 	position: relative;
 	top: 1px;
-	white-space: nowrap;
 }
 
 li.tabinactive
@@ -2113,6 +2304,7 @@ li.tabinactive
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #bccae5;
+	white-space: nowrap;
 }
 
 a.tabinactive
@@ -2148,6 +2340,7 @@ li.tabactive
 	border-bottom-style: solid;
 	border-bottom-color: #FFFFFF;
 	background-color: #FFFFFF;
+	white-space: nowrap;
 }
 
 a.tabactive:link, a.tabactive:visited, a.tabactive:hover
@@ -2170,7 +2363,7 @@ a.backtab, a.backtab:hover
 {
 	float: left;
 	display:block;
-	background:url("images/BackTab.gif") no-repeat left top;
+	/*background:url("images/BackTab.gif") no-repeat left top;*/
     padding: 3px 8px 3px 12px;
 	font-size: 80%;
 }
@@ -2186,7 +2379,7 @@ a.back2tab, a.back2tab:hover
 {
 	float: left;
 	display:block;
-	background:url("images/Back2Tab.gif") no-repeat left top;
+	/*background:url("images/Back2Tab.gif") no-repeat left top;*/
     padding: 3px 8px 3px 12px;
 	font-size: 80%;
 }
@@ -2196,6 +2389,7 @@ li.nontabbed
 	float:left;
 	margin: 0px 2px 0px 0px;
 	padding: 0px;
+	white-space: nowrap;
 	/* border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #bccae5; */
@@ -2286,12 +2480,48 @@ table.il_ColumnLayout
 	border-spacing:0px;
 }
 
+/* GroupedLists */
+
+div.ilGroupedListH {
+	padding: 2px 10px;
+	background-color:#F0F0F0;
+	font-size:85%;
+}
+
+div.ilGroupedListSep {
+	padding-bottom: 3px;
+	border-bottom: 1px solid #E0E0E0;
+	/* height: 1px; */
+	margin: 0 10px 3px 10px;
+}
+
+a.ilGroupedListLE {
+	display: block;
+	padding: 5px 10px;
+	font-size: 90%;
+}
+
+a.ilGroupedListLE:hover {
+	background-color: #FFFFD9;
+	text-decoration: none;
+}
+
+td.ilGroupedListNewCol {
+	border-left: 1px solid #E0E0E0;
+}
+
 /* Overlays, Blocks */
 table.il_Block, .ilOverlay
 {
 	background-color:#FFFFFF;
 	border: 1px solid #D6D6D6;
 	text-align: left;
+}
+
+.ilOverlay
+{
+	position:absolute;
+	box-shadow: 2px 2px 4px #C0C0C0;
 }
 
 /* Blocks */
@@ -2313,8 +2543,8 @@ td.ilBlockHeader, td.ilBlockHeaderBig
 	font-size: 90%;
 	color: #404040;
 	background-color: #F8F8F8;
-	background-image: url(images/block_top.gif);
-	background-repeat: repeat-x;
+	/*background-image: url(images/block_top.gif);
+	background-repeat: repeat-x;*/
 	border-bottom:1px solid #E9E9E9;
 }
 
@@ -2354,8 +2584,8 @@ th.ilContainerBlockHeader
 	text-align:left;
 	vertical-align: middle;
 	background-color: #F8F8F8;
-	background-image: url(images/block_top.gif);
-	background-repeat: repeat-x;
+	/*background-image: url(images/block_top.gif);
+	background-repeat: repeat-x;*/
 	border-bottom-width:1px;
 	border-bottom-style:solid;
 	border-bottom-color:#E9E9E9;
@@ -2519,14 +2749,13 @@ div.il_ContainerListItem
 
 div.il_adv_sel
 {
-	border-width:1px;
-	border-style:solid;
-	border-color: #A0A0A0;
+	border:1px solid #D6D6D6;
+	box-shadow: 2px 2px 4px #C0C0C0;
 }
 
 table.il_adv_sel {
 	color:#000000;
-	background-color:#FAFAFA;
+	background-color:#FFFFFF;
 	border-spacing:0px;
 	cursor: pointer;
 }
@@ -2571,8 +2800,8 @@ div.ilTableHeaderTitleBlock
 	font-size: 90%;
 	color: #404040;
 	background-color: #F8F8F8;
-	background-image: url(images/block_top.gif);
-	background-repeat: repeat-x;
+	/*background-image: url(images/block_top.gif);
+	background-repeat: repeat-x;*/
 	border-bottom-width:1px;
 	border-bottom-style:solid;
 	border-bottom-color:#E9E9E9;
@@ -2775,12 +3004,32 @@ a.ilAccAnchor, a.ilAccAnchor:hover {
 
 /* Notes */
 
+div.ilNotes
+{
+	max-width: 600px;
+}
+
+div.ilComment
+{
+	padding-left: 50px;
+}
+
+div.ilNotesUImage
+{
+	float:left;
+	margin-left: -50px;
+}
+
+div.ilNoteText
+{
+	font-size: 95%;
+	margin-top:5px;
+}
+
 div.ilNotesHeader{
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #606060;
+	background-color: #F0F0F0;
 	margin-bottom:5px;
-	padding-bottom:5px;
+	padding:5px;
 }
 
 h3.ilNotesHeader{
@@ -2791,14 +3040,13 @@ h3.ilNotesHeader{
 
 h4.ilNoteTitle{
 	font-size:100%;
-	display: inline;
 	margin: 0px;
 	padding: 0px;
 }
 
 td.ilNoteList {
 	padding: 10px 5px;
-	border-bottom: 1px dotted #A0A0A0;
+	border-top: 1px solid #F0F0F0;
 	vertical-align: top;
 }
 
@@ -2838,6 +3086,18 @@ div.ilc_TextPlaceHolderThumb
 	border-style: solid;
 	font-weight: bold;
 	background: url(images/text_placeholder_thumb.png) no-repeat center center;
+}
+
+div.ilc_PredTextPlaceHolderThumb
+{
+	margin:1px;
+	padding: 5px 2px 5px 0px;
+	border-width: 1px;
+	font-size: 10px;
+	border-color: grey;
+	border-style: solid;
+	font-weight: bold;
+	background: url(images/pred_text_placeholder_thumb.png) no-repeat center center;
 }
 
 div.ilc_HeadlineThumb
@@ -2890,9 +3150,9 @@ h3.ilProfileSectionHead {
 /* revised 4.1 */
 
 /* Tooltip */
-.yui-tt {
+.yui-skin-sam .yui-tt .bd, .yui-tt .bd{
 	color: #333333;
-	padding: 4px 8px 2px 8px;
+	padding: 4px 4px 4px 4px;
 	font-size: 90%;
 	border: solid #FFDD77 2px;
 	line-height: 100%;
@@ -2901,6 +3161,11 @@ h3.ilProfileSectionHead {
 	-moz-box-shadow: 2px 2px 2px #888;
 	-webkit-border-radius: 5px;
 	-webkit-box-shadow: 2px 2px 2px #888;
+	max-width: 300px;
+}
+
+.yui-skin-sam .yui-tt .yui-tt-shadow {
+	display:none;
 }
 
 /* locator */
@@ -2909,3 +3174,235 @@ div.ilLocator {
 	zoom: 1;
 }
 
+a.ilLocatorLink, a.ilLocatorLink:link, a.ilLocatorLink:visited, a.ilLocatorLink:hover
+{
+	color: #0033AA;
+	color: #80A0D0;
+	font-weight: normal;
+}
+
+div.iosMainScroll
+{
+	position: absolute;
+	padding-right:20px;
+	overflow-y:auto;
+	zoom:1;
+	overflow-x:hidden;
+	right:10px;
+	left:10px;
+}
+
+/* Modules/Wiki */
+
+ul.ilWikiBlockList
+{
+	margin: 0px 0px 0px 20px;
+	padding: 0px;
+	list-style:disc outside;
+}
+
+ul.ilWikiBlockListNoIndent
+{
+	margin: 0px;
+	padding: 0px;
+	list-style:none;
+}
+
+li.ilWikiBlockItem
+{
+	margin:0;
+	padding:0;
+}
+
+
+/* Fixed Frame Width */
+
+div.ilFrameFixedWidth
+{
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.ilFrameFixedWidthHeader
+{
+	max-width: 880px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.ilFrameFixedWidthHeader div.ilHeaderBanner
+{
+	max-width: 880px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+}
+
+.ilFrameFixedWidthHeader div.ilHeaderImg
+{
+	float:left; 
+	margin: 2px 10px 0px 0px;
+}
+
+.ilFrameFixedWidthHeader .ilHeaderImg img
+{
+	border: 0;
+	margin-right: 25px;
+}
+
+.ilFrameFixedWidthHeader h1.ilHeader
+{
+	padding: 0;
+	margin-top: 25px;
+}
+
+.ilFrameFixedWidthHeader div.ilHeaderDesc 
+{
+	padding-left: 0;
+}
+
+
+/* Modules / Blog */
+
+div.ilBlogList {	
+	border: 1px solid #E0E0E0;
+	padding: 10px;
+}
+
+div.ilBlogListItem {
+	padding-bottom: 5px;
+	margin-bottom: 25px; 
+}
+
+div.ilBlogListItemTitle {
+	border-bottom: 1px solid #E0E0E0;
+}
+
+div.ilBlogListItemTitle h3 {
+	margin-bottom: 5px;
+}
+
+div.ilBlogListItemSubTitle {
+	margin-top: 5px;
+}
+
+div.ilBlogListItemSnippet {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+/* Services/Skill */
+
+div.ilSkill {
+	background-image:url('./images/FramedBack.gif');
+	background-repeat:repeat-x;
+	border: 1px solid #E0E0E0;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+div.ilSkill > h3 {
+	margin: 10px 0;
+	padding: 0;
+	font-size: 1.2em;
+	float:left;
+}
+
+div.ilSkill > h4 {
+	margin: 10px 0;
+	padding: 0;
+	font-size: 0.9em;
+	color: #909090;
+	float:left;
+	clear:left;
+}
+
+table.ilSkill, td.ilSkill, th.ilSkill {
+	border: 1px solid #E0E0E0;
+}
+
+div.ilSkillActions {
+	float:right;
+}
+
+table.ilSkill {
+	margin-bottom: 5px;
+	margin-left: 50px;
+	background-color: #FFFFFF;
+	border-collapse: collapse;
+	clear:both;
+}
+
+td.ilSkill, th.ilSkill {
+	font-size: 0.8em;
+	padding: 4px;
+	min-width: 50px;
+}
+
+td.ilSkill {
+	text-align:center;
+}
+
+td.ilSkillLevel {
+	cursor: pointer;
+}
+
+th.ilSkill, td.ilSkillLevel{
+	background-color: #F8F8F8;
+}
+
+td.ilSkillSelf {
+	background-color: #FFF0E0;
+}
+
+td.ilSkillMat {
+	background-color: #F0F0FF;
+}
+
+
+/* Top-Bar */
+
+div.ilTopBar {
+  background-color: #444;
+  color: white;
+  padding: 5px 10px 5px 10px;
+}
+
+div.ilTopBar a {
+	color: white;
+}
+
+div.ilTopBarLeft {
+	float: left;
+}
+
+div.ilTopBarRight {
+	float: right;
+}
+
+div.ilTopBarRight span#ilAdvSelListAnchorElement_asl {
+	margin-right: 25px;
+	color: black;
+}
+
+div.ilTopBarRight td.il_adv_sel {
+	background-color: #444;
+}
+
+td.ilRight, th.ilRight {
+	text-align:right;
+}
+
+.ilBlogListItemDraft {
+	border: 2px dotted red;
+	padding: 3px;
+}
+
+.ilBlogNavigationItemDraft {
+	color: red;
+}
