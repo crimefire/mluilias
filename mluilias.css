@@ -99,20 +99,6 @@ input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5
 
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
-.clearfix:before,
-.clearfix:after {
-    content: "";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
-
 /* delos layout images not found fix / background resets */
 td.ilBlockHeader, td.ilBlockHeaderBig,
 th.ilContainerBlockHeader,
@@ -440,32 +426,33 @@ header[role="banner"] {
 		padding-top: .5em
 	}
 
-	header[role="banner"] h1 span {
-		display: block;
-		color: #b7b7b7
-	}
+		header[role="banner"] h1 span {
+			display: block;
+			color: #b7b7b7
+		}
 
 	#logo {
 		float: left;
-		margin-right: 1em
-	}
-
-	#logo img {
-		-moz-opacity: 0.3;
-		-khtml-opacity: 0.3;
-		opacity: 0.3;
+		display: block;
+		margin-right: 1em;
+		width: 153px;
+		height: 80px;
+		background: url('assets/images/mlu-siegel.png') no-repeat left top;
+		-moz-opacity: 0.5;
+		-khtml-opacity: 0.5;
+		opacity: 0.5;
 		-webkit-transition: opacity .4s ease-in-out;
 		-moz-transition: opacity .4s ease-in-out;
 		-o-transition: opacity .4s ease-in-out;
 		transition: opacity .4s ease-in-out;
 	}
 	
-		.no-opacity #logo img {
-			filter: alpha(opacity=30);
+		.no-opacity #logo {
+			filter: alpha(opacity=50);
 			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
 		}
 	
-	#logo:hover img {
+	#logo:hover {
 		-moz-opacity: 1;
 		-khtml-opacity: 1;
 		opacity: 1;
@@ -473,10 +460,14 @@ header[role="banner"] {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	}
 	
+	#logo img {
+		display: none;
+	}
+	
 aside#userAccount {
 	padding: .2em 1em .3em 1em;
 	position: absolute;
-	right: 0;
+	right: 1%;
 	top: 0;
 	color: #5f6357;
 	color: rgba(68, 68, 68, .8);
@@ -528,8 +519,6 @@ aside#userAccount {
 		margin: 0;
 		padding: 0
 	}
-	
-	
 
 /* ============================================= */
 /* !Main Navigation */
@@ -1590,6 +1579,28 @@ a.backtab, a.backtab:hover,
 a.back2tab, a.back2tab:hover {
 	background-image: none !important;
 }
+
+
+/* ========================================== */
+/* high pixel ratio devices   */
+/* ========================================== */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx) {
+  	
+  	#logo {
+  		background-image: url('assets/images/mlu-siegel_2x.png');
+  		-webkit-background-size: 100%;
+  		-moz-background-size: 100%;
+  		background-size: 100%;
+  	}
+  
+}
+
 
 /* Responsive design. 
 --------------------------------*/
