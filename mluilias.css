@@ -221,6 +221,8 @@ a, a:link, a:active, a:visited {
 	text-decoration: none;
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
 }
 
 a:hover {
@@ -364,6 +366,37 @@ a.ilEditSubmit:active {
 ::selection { background:#000; color:#fff; text-shadow: none; }
 
 /* ============================================= */
+/* !Icons */
+/* ============================================= */
+
+/* 
+Sub-setted icon files
+Usage: <i class="icon-mail"></i> 
+*/
+@font-face {
+	font-family: 'IcoMoon';
+	src: url('assets/fonts/IcoMoon.eot');
+	src: url('assets/fonts/IcoMoon.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/IcoMoon.svg#IcoMoon') format('svg'),
+		url('assets/fonts/IcoMoon.woff') format('woff'),
+		url('assets/fonts/IcoMoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	font-family: 'IcoMoon';
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	font-size: 16px;
+}
+.icon-mail:before {
+	content: "\e000";
+}
+
+/* ============================================= */
 /* !Layout */
 /* ============================================= */
 
@@ -439,54 +472,63 @@ header[role="banner"] {
 		filter: alpha(opacity=100);
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	}
+	
+aside#userAccount {
+	padding: .2em 1em .3em 1em;
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #5f6357;
+	color: rgba(68, 68, 68, .8);
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	background: #9bc34b;
+	background: -moz-linear-gradient(top, #9bc34b 0%, #92b948 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9bc34b), color-stop(100%,#92b948));
+	background: -webkit-linear-gradient(top, #9bc34b 0%,#92b948 100%);
+	background: -o-linear-gradient(top, #9bc34b 0%,#92b948 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc34b', endColorstr='#92b948',GradientType=0 );
+	background: linear-gradient(top, #9bc34b 0%,#92b948 100%);
+	-webkit-border-bottom-right-radius: 7px;
+	-webkit-border-bottom-left-radius: 7px;
+	-moz-border-radius-bottomright: 7px;
+	-moz-border-radius-bottomleft: 7px;
+	border-bottom-right-radius: 7px;
+	border-bottom-left-radius: 7px;
+	border: 1px solid #86a841;
+	border-bottom-color: #718f38;
+	border-top: none;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+	box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
 
-	div.ilLogin {
-		padding: .1em 1em .2em 1em;
-		white-space: normal;
-		text-align: center;
-		position: absolute;
-		right: 0;
-		top: 0;
-		min-width: 320px;
-		color: #5f6357;
-		color: rgba(68, 68, 68, .8);
-		text-shadow: 0 1px 0 rgba(255,255,255,.5);
-		background: #9bc34b;
-		background: -moz-linear-gradient(top, #9bc34b 0%, #92b948 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9bc34b), color-stop(100%,#92b948));
-		background: -webkit-linear-gradient(top, #9bc34b 0%,#92b948 100%);
-		background: -o-linear-gradient(top, #9bc34b 0%,#92b948 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc34b', endColorstr='#92b948',GradientType=0 );
-		background: linear-gradient(top, #9bc34b 0%,#92b948 100%);
-		-webkit-border-bottom-right-radius: 7px;
-		-webkit-border-bottom-left-radius: 7px;
-		-moz-border-radius-bottomright: 7px;
-		-moz-border-radius-bottomleft: 7px;
-		border-bottom-right-radius: 7px;
-		border-bottom-left-radius: 7px;
-		border: 1px solid #86a841;
-		border-bottom-color: #718f38;
-		border-top: none;
-		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);
-		-moz-box-shadow: 0 1px 3px rgba(0,0,0,.2);
-		box-shadow: 0 1px 3px rgba(0,0,0,.2);
+	aside#userAccount a {
+		color: #005133;
+		text-shadow: 0 1px 0 rgba(255,255,255,.3);
 	}
 	
-		div.ilLogin a {
-			color: #005133;
-			text-shadow: 0 1px 0 rgba(255,255,255,.5);
-		}
-		
-			div.ilLogin a:active {
-				color: #fff;
-				text-shadow: 0 -1px 0 #444;
-			}
+	aside#userAccount a:active {
+		color: #fff;
+		text-shadow: 0 -1px 0 #444;
+	}
 	
-		div.ilLogin span.il_menu {
-			padding-left: 0;
-			min-width: 390px;
-			display: block;
-		}
+	#mailNotification {
+		float: left;
+		margin-right: 1em;
+		display: block;
+		width: 24px;
+		height: 24px;
+		text-align: center
+	}
+
+	div.ilLogin {
+		white-space: normal;
+		clear: none;
+		font-size: .8em;
+		margin: 0;
+		padding: 0
+	}
+	
 	
 
 /* ============================================= */
