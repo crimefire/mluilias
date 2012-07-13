@@ -520,6 +520,33 @@ aside#userAccount {
 		padding: 0
 	}
 
+/* Le notification bubble 
+   adapted from Badged | http://kremalicious.com/badged
+*/
+span.ilMMStatus, 
+span.ilHActProp {
+	color: #fff;
+	font: 10px/15px Helvetica, Verdana, Geneva, sans-serif;
+	text-shadow: 0 1px 1px #430f0f;
+	padding: 0 .4em;
+	text-align: center;
+	-webkit-box-shadow: 0px 2px 2px #888;
+	-moz-box-shadow: 0px 2px 2px #888;
+	box-shadow: 0px 2px 2px #888;
+	
+	background-color: #d5231f;
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(255,255,255,0)));
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-image: linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 );
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
 /* ============================================= */
 /* !Main Navigation */
 /* ============================================= */
