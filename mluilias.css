@@ -734,8 +734,9 @@ a.ilLocatorLink:hover {
 	color: #6AA101;
 }
 
-/* Tabs */
-
+/* ============================================= */
+/* !Tabs */
+/* ============================================= */
 
 li.tabactive,
 a.tabinactive {
@@ -746,7 +747,6 @@ a.tabinactive {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
-
 
 li.tabactive {
 	border-color: #9fc94e #9fc94e #FFFFFF;
@@ -760,8 +760,21 @@ li.tabactive {
 li.tabinactive {
 	border-bottom: 1px solid #9fc94e;
 }
-
+	a.tabinactive,
+	a.tabactive:link, 
+	a.tabactive:visited, 
+	a.tabactive:hover {
+		font-size: .9em
+	}
+	
+	a.tabactive:link, 
+	a.tabactive:visited, 
+	a.tabactive:hover {
+		padding: .4em 1em;
+	}
+	
 	a.tabinactive {
+		padding: .51em 1em;
 		background-color: #f6fcec;
 		border-color: #9fc94e #9fc94e;
 		border-color: rgba(159, 201, 78, .5) rgba(159, 201, 78, .5);
