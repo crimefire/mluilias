@@ -808,15 +808,18 @@ a.ilTreeView img {
 /* ============================================= */
 
 /* Background/border resets */
-table.ilTabContentOuter,
 table.il_InfoScreen {
 	border: none;
 	background: none
 }
 
+table.ilTabContentOuter {
+	border-color: #9fc94e;
+}
+
 div.ilTabContentInner {
 	margin: 0;
-	padding: 0;
+	padding: 2%;
 }
 
 td.il_LeftColumn {

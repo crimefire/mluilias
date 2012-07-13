@@ -29,12 +29,17 @@ Author: Matthias Kretschmann | http://mkretschmann.com
 	<!-- END userisanonymous -->
 	<!-- BEGIN userisloggedin -->
 	<div class="ilLogin">
-		{USERNAME} » <a class="ilLogin" href="{LINK_LOGOUT2}" target="_top">{TXT_LOGOUT2}</a>
+		{USERNAME} » <a class="ilLogin" href="{LINK_LOGOUT2}" target="_top">{TXT_LOGOUT2}</a> {LANG_SELECT}
 	</div>
 	<!-- END userisloggedin -->
 	<!-- BEGIN status_box -->
 	<div class="xsmall">
-		<!-- BEGIN status_item --><a class="il_ItemProperty" target="_top" href="{STATUS_HREF}"><img src="{STATUS_IMG}"/><!-- BEGIN status_text --><span class="ilMMStatus">{STATUS_TXT}</span><span class="small" style="visibility:hidden;">{STATUS_TXT}</span><!-- END status_text --></a><!-- END status_item -->
+		<!-- BEGIN status_item -->
+		<a class="il_ItemProperty" target="_top" href="{STATUS_HREF}">
+			<img src="{STATUS_IMG}"/>
+			<!-- BEGIN status_text -->
+			<span class="ilMMStatus">{STATUS_TXT}</span><span class="small" style="visibility:hidden;">{STATUS_TXT}</span><!-- END status_text -->
+		</a><!-- END status_item -->
 	</div>
 	<!-- END status_box -->
 </header>
