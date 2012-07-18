@@ -1405,6 +1405,7 @@ div.ilc_question_Standard {
 
 table.calmini {
 	font-size: 1.1em;
+	border-bottom: 1px solid #eee !important;
 }
 
 td.calminiweek, th.calminiweek,
@@ -1420,9 +1421,22 @@ td.calminiweek, th.calminiweek,
 		color: #909090
 	}
 
-p.il_calmini_monthday a, div.il_calmini_monthday a {
+p.il_calmini_monthday a, 
+div.il_calmini_monthday a {
 	display: block;
 	padding: .3em
+}
+
+tr.calmini {
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+}
+
+td.calministd,
+td.calminiprev,
+td.calmininext {
+	border-right: 1px solid #eee !important;
+	border-left: 1px solid #eee !important;
 }
 
 td.calmininext,
@@ -1432,6 +1446,12 @@ td.calminiprev {
 	opacity: 0.5;
 	filter: alpha(opacity=50);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+
+td.calminitoday {
+	background: #dfeae7;
+	border: 1px solid #eee !important;
 }
 
 
