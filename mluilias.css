@@ -121,8 +121,14 @@ a.ilEditSubmit,
 input.ilEditSubmit,
 input.ilMainMenuSearchSubmit,
 div.ilFrameH, div.ilFrameTL, div.ilFrameTR, div.ilFrameBR, div.ilFrameBL,
-table.il_Block {
-	background: none
+table.il_Block,
+table.ilForm {
+	background: none;
+	border: none
+}
+
+table {
+	width: 100%;
 }
 
 /* END minimal base styles */
