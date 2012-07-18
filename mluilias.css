@@ -377,7 +377,11 @@ Usage: <i class="icon-mail"></i>
 }
 
 [class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class*=" icon-"]:before,
+div.ilInfoMessage:before, 
+div.ilFailureMessage:before, 
+div.ilSuccessMessage:before, 
+div.ilQuestionMessage:before {
 	font-family: 'IcoMoon';
 	font-style: normal;
 	font-weight: normal;
@@ -387,6 +391,23 @@ Usage: <i class="icon-mail"></i>
 .icon-mail:before {
 	content: "\e000";
 }
+.icon-smiley:before,
+div.ilSuccessMessage:before {
+	content: "\e001";
+}
+.icon-shocked:before,
+div.ilFailureMessage:before {
+	content: "\e002";
+}
+.icon-info:before,
+div.ilInfoMessage:before {
+	content: "\e003";
+}
+.icon-help:before,
+div.ilQuestionMessage:before {
+	content: "\e004";
+}
+
 
 /* ============================================= */
 /* !Layout */
@@ -1604,32 +1625,72 @@ div.ilMemberViewMainHeader h4 {
 	text-align: center;
 }
 
-/* Messages
---------------------------------*/
+/* ============================================= */
+/* !Messages & Alerts */
+/* ============================================= */
 
-.warning {
-	text-align: center;
-	background-color: #fbc8c8;
-	background-color: rgba(255, 0, 0, .2);
-	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 2%, rgba(255,255,255,0) 100%);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.8)), color-stop(2%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0)));
-	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.2) 2%,rgba(255,255,255,0) 100%);
-	background-image: -o-linear-gradient(top, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.2) 2%,rgba(255,255,255,0) 100%);
-	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.2) 2%,rgba(255,255,255,0) 100%);
-	background-image: linear-gradient(top, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.2) 2%,rgba(255,255,255,0) 100%);
-	border: 1px solid red;
+div.ilInfoMessage, 
+div.ilFailureMessage,
+.warning, 
+div.ilSuccessMessage, 
+div.ilQuestionMessage {
+	display: block;
+	padding: 1em 2em;
+	margin: 1em 0;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	padding: 1em;
-	margin: 1em 0;
-	color: #8e2f2f;
-	text-shadow: 0 1px 0 rgba(255,255,255,.4);
-	display: block;
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);
-	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.2);
-	box-shadow: 0 1px 3px rgba(0,0,0,.2);
+	font-weight: bold;
+	text-shadow: 0 1px 0 rgba(255,255,255,.3);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.3);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.3);
+	box-shadow: 0 1px 3px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.3);
 }
+
+	div.ilInfoMessage:before, 
+	div.ilFailureMessage:before, 
+	div.ilSuccessMessage:before, 
+	div.ilQuestionMessage:before {
+		font-size: 24px;
+		vertical-align: middle;
+		margin-right: .5em;
+		top: -4px;
+		position: relative;
+	}
+
+img.ilInfoMessage, 
+img.ilFailureMessage, 
+img.ilSuccessMessage, 
+img.ilQuestionMessage {
+	display: none;
+}
+
+div.ilInfoMessage {
+	color: #5e656d;
+	background: #dcedff;
+	border: 1px solid #b9c7d6;
+}
+
+div.ilSuccessMessage {
+	color: #567856;
+	border: 1px solid #a3d0a3;
+	background: #b5e6b5;
+}
+
+div.ilFailureMessage,
+.warning {
+	color: #8e2f2f;
+	background: #fbc8c8;
+	border: 1px solid #ea8b8c;
+}
+
+div.ilQuestionMessage {
+	color: #786d3b;
+	background: #fffae3;
+	border: 1px solid #ffe87f;
+	box-shadow: 0 1px 3px rgba(0,0,0,.05), inset 0 1px 0 rgba(255,255,255,.8);
+}
+
 
 /* Non-semantic helper classes 
 --------------------------------*/
