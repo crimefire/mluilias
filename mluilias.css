@@ -261,9 +261,9 @@ div.input {
 	padding: .4em .5em;
 	border: 1px solid #ccc;
 	background: #fbfbfb;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
@@ -289,61 +289,57 @@ textarea:focus {
 	outline: none
 }
 
-/* Reset delos button styles */
-input.submit, a.submit,
+/* Reset & redefine delos button styles */
+input.submit, 
+a.submit,
 input.ilEditSubmit,
-a.submit:hover, input.submit:hover,
+a.submit:hover, 
+input.submit:hover,
 input.ilEditSubmit:hover,
-a.submit .small, a.submit:hover .small {
+a.submit .small, 
+a.submit:hover .small {
 	background-color: transparent;
     background-image: none;
     border: none;
-    font-size: 100%;
+    
+    /* Start our own button styles */
+    font-size: .9em;
+	font-weight: bold;
+	line-height: 20px;
+	text-align: center;
+	display: inline-block;
+	padding: .4em 1em;
+	color: #18363f;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #4dabc7;
+	border-bottom-color: #3c869b;
+	text-shadow: 0 1px 0 rgba(255,255,255,.3);
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.4);
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.4);
+	box-shadow: 0 1px 4px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.4);
+	background-image: -webkit-linear-gradient(rgba(255,255,255,.3) 0%, rgba(255,255,255,0) 100%);
+	background-image: -moz-linear-gradient(rgba(255,255,255,.3) 0%, rgba(255,255,255,0) 100%);
+	background-image: -o-linear-gradient(rgba(255,255,255,.3) 0%, rgba(255,255,255,0) 100%);
+	background-image: linear-gradient(rgba(255,255,255,.3) 0%, rgba(255,255,255,0) 100%);
 }
 
-/* Start our own button styles */
 input.submit,
 a.submit,
 input.ilEditSubmit {
-	color: #1c5562;
-	background-color: #dfeae7;
-	background-image: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,0) 3%, rgba(0,0,0,0.01) 27%, rgba(0,0,0,0.05) 100%);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(3%,rgba(246,246,246,0)), color-stop(27%,rgba(0,0,0,0.01)), color-stop(100%,rgba(0,0,0,0.05)));
-	background-image: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,0) 3%,rgba(0,0,0,0.01) 27%,rgba(0,0,0,0.05) 100%);
-	background-image: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,0) 3%,rgba(0,0,0,0.01) 27%,rgba(0,0,0,0.05) 100%);
-	background-image: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,0) 3%,rgba(0,0,0,0.01) 27%,rgba(0,0,0,0.05) 100%);
-	background-image: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(246,246,246,0) 3%,rgba(0,0,0,0.01) 27%,rgba(0,0,0,0.05) 100%);
-	border: 1px solid #c5cfcf;
-	border-bottom-color: #b0b9bb;
-	text-shadow: 0 1px 0 rgba(255,255,255,.5);
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.1);
-	box-shadow: 0 1px 2px rgba(0,0,0,.1);
-	display: inline-block;
-	padding: .4em 1em;
-	text-align: center;
 	position: relative;
-	line-height: 20px;
-	font-weight: bold;
-	font-size: .9em;
+	background-color: #4dabc7;
 }
 
 	a.submit .small {
 		font-size: .9em;
 	}
 
-a.submit:hover, input.submit:hover,
+a.submit:hover, 
+input.submit:hover,
 input.ilEditSubmit:hover {
-	background-color: #dfeae7;
-	border: 1px solid #c5cfcf;
-	border-bottom-color: #b0b9bb;
-	background-color: #dfeae7;
-	color: #444444;
-	font-size: .9em;
-	display: inline-block;
-	padding: .4em 1em;
-	line-height: 20px;
-	font-weight: bold;
+	background-color: #60c2df;
 }
 
 	a.submit:hover .small {
@@ -364,6 +360,23 @@ a.ilEditSubmit:active {
 td.ilFormHeader input.submit {
 	margin-top: 2.7em;
 	margin-right: .5em;
+}
+
+/* 
+  Less padding for some special buttons
+  (why is everything in Ilias a submit input?)
+*/
+table.il_Block input.ilEditSubmit,
+div.ilTableCommandRowTop input.submit,
+div.ilTableCommandRow input.submit,
+div.ilTableFilterSec input.submit,
+div.ilToolbar input.submit {
+	padding: .1em 1em;
+}
+
+div.ilTableCommandRowTop input.submit,
+div.ilTableCommandRow input.submit {
+	margin: .5em 0
 }
 
 /* Selection styles */
