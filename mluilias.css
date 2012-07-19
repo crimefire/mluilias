@@ -247,18 +247,27 @@ a.il_ContainerItemCommand2:link, a.il_ContainerItemCommand2:visited, a.il_Contai
 
 /* Form Styles */
 
-input, textarea, select, a.submit {
+/* delos redefining */
+input, 
+textarea, 
+select,
+input[type="text"],
+input[type="file"],
+input[type="password"],
+div.input {
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 100%;
+	padding: .4em .5em;
+	border: 1px solid #ccc;
+	background: #fbfbfb;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	border: 1px solid #ccc;
-	padding: .1em .5em;
-	font-weight: bold;
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
-	background: #fbfbfb;
 }
 
 label {
@@ -281,7 +290,6 @@ textarea:focus {
 }
 
 /* Reset delos button styles */
-
 input.submit, a.submit,
 input.ilEditSubmit,
 a.submit:hover, input.submit:hover,
@@ -294,7 +302,6 @@ a.submit .small, a.submit:hover .small {
 }
 
 /* Start our own button styles */
-
 input.submit,
 a.submit,
 input.ilEditSubmit {
@@ -313,7 +320,7 @@ input.ilEditSubmit {
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.1);
 	box-shadow: 0 1px 2px rgba(0,0,0,.1);
 	display: inline-block;
-	padding: .2em 1em;
+	padding: .4em 1em;
 	text-align: center;
 	position: relative;
 	line-height: 20px;
@@ -334,7 +341,7 @@ input.ilEditSubmit:hover {
 	color: #444444;
 	font-size: .9em;
 	display: inline-block;
-	padding: .2em 1em;
+	padding: .4em 1em;
 	line-height: 20px;
 	font-weight: bold;
 }
@@ -351,6 +358,12 @@ a.ilEditSubmit:active {
 	-moz-transition: none;
 	-o-transition: none;
 	transition: none;
+}
+
+/* Submit Button in FormHeader fix */
+td.ilFormHeader input.submit {
+	margin-top: 2.7em;
+	margin-right: .5em;
 }
 
 /* Selection styles */
@@ -967,12 +980,15 @@ div.il_HeaderInner {
 
 h1.ilHeader {
 	padding: 0;
-	margin: 1em 0 1em 50px;
+	margin: 1em 0;
 	border-bottom: 1px solid #F0F0F0;
 	-webkit-box-shadow: 0 1px 0 #fff;
 	-moz-box-shadow: 0 1px 0 #fff;
 	box-shadow: 0 1px 0 #fff;
 	position: relative;
+}
+h1.ilHeader.ilHeaderHasIcon {
+	margin: 1em 0 1em 50px;
 }
 	
 	h1.ilHeader span {
@@ -990,6 +1006,12 @@ div.ilHeaderDesc {
 	color: #A4A4A4;
 	margin-top: -1.3em;
 	margin-bottom: 1em
+}
+
+div.ilHeadAction { 
+	margin-top: 10px;
+	position: relative;
+	z-index: 10;
 }
 
 table.fullwidth {
@@ -1038,7 +1060,7 @@ div.ilTableHeaderTitle {
 	vertical-align: middle;
 }
 
-td.ilFormHeader, td.ilFormFooter {
+td.ilFormHeader {
 	background: none;
 	padding: .5em .3em;
 	margin: 2em 0;
@@ -1048,8 +1070,8 @@ h3.ilFormHeader,
 h3.ilTableHeaderTitle,
 h3.il_InfoScreenSection {
 	display: block;
-	background-color: #F8F8F8;
-	padding: .5em .3em;
+	background: #F8F8F8;
+	padding: 1em .5em;
 	margin: 1em 0;
 	border-bottom: 1px solid #E9E9E9;
 	font-weight: normal
@@ -1063,6 +1085,23 @@ td.ilBlockHeader, td.ilBlockHeaderBig {
 
 h3.ilPDBlockSubHeader {
 	color: #8a8a8a
+}
+
+/*
+Styling the Form Footer
+cause it's usually an action row with buttons
+*/
+td.ilFormFooter {
+	background: none;
+	padding: 0;
+	margin: 0
+}
+td.ilFormFooter > div {
+	background: none;
+	padding: 1em .5em;
+	margin: 4em 0;
+	background: #F8F8F8;
+	border-top: 1px solid #E9E9E9
 }
 
 /* Make a lot of stuff borderless */
