@@ -1060,15 +1060,20 @@ div.ilTableHeaderTitle {
 	vertical-align: middle;
 }
 
-td.ilFormHeader {
+/*
+Reset the Form Header & Footer
+*/
+td.ilFormHeader,
+td.ilFormFooter {
 	background: none;
-	padding: .5em .3em;
-	margin: 2em 0;
+	padding: 0;
+	margin: 0
 }
 
 h3.ilFormHeader,
 h3.ilTableHeaderTitle,
-h3.il_InfoScreenSection {
+h3.il_InfoScreenSection,
+td.ilFormFooter > div {
 	display: block;
 	background: #F8F8F8;
 	padding: 1em .5em;
@@ -1088,20 +1093,12 @@ h3.ilPDBlockSubHeader {
 }
 
 /*
-Styling the Form Footer
-cause it's usually an action row with buttons
+Form Footer only
 */
-td.ilFormFooter {
-	background: none;
-	padding: 0;
-	margin: 0
-}
 td.ilFormFooter > div {
-	background: none;
-	padding: 1em .5em;
 	margin: 4em 0;
-	background: #F8F8F8;
-	border-top: 1px solid #E9E9E9
+	border-top: 1px solid #E9E9E9;
+	border-bottom: none
 }
 
 /* Make a lot of stuff borderless */
