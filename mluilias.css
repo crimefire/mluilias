@@ -1635,7 +1635,7 @@ div.ilFailureMessage,
 div.ilSuccessMessage, 
 div.ilQuestionMessage {
 	display: block;
-	padding: 1em 2em;
+	padding: 1em 2em 1em 5em;
 	margin: 1em 0;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -1653,8 +1653,9 @@ div.ilQuestionMessage {
 	div.ilQuestionMessage:before {
 		font-size: 24px;
 		vertical-align: middle;
-		margin-right: .5em;
-		top: -4px;
+		margin-right: .8em;
+		margin-left: -2em;
+		top: -2px;
 		position: relative;
 	}
 
@@ -1688,6 +1689,8 @@ div.ilQuestionMessage {
 	color: #786d3b;
 	background: #fffae3;
 	border: 1px solid #ffe87f;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.05), inset 0 1px 0 rgba(255,255,255,.8);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.05), inset 0 1px 0 rgba(255,255,255,.8);
 	box-shadow: 0 1px 3px rgba(0,0,0,.05), inset 0 1px 0 rgba(255,255,255,.8);
 }
 
