@@ -1577,106 +1577,102 @@ div.ilMemberViewMainHeader h4 {
 /* Login Page
 --------------------------------*/
 
-#ilMainContainer.ilLoginPage {
+#ilMainContainer.ilLoginPage,
+#ilMainContainer.ilLogoutPage {
 	max-width: 400px;
 	min-width: 240px;
 	padding-top: 5%
 }
-
-	.ilLoginPage img,
-	.ilLoginPage form,
-	.ilLoginPage table {
-		display: block;
+	
+	.ilLoginPage #logo,
+	.ilLogoutPage #logo {
+		float: none;
 		margin: 0 auto
 	}
 	
-	.ilLoginPage img {
-		margin-bottom: 1em
-	}
-	
-	.ilLoginPage #formlogin {
-		border-bottom: 3px solid #9bc34b;
-		margin-bottom: 0;
-		padding-bottom: 1em
-	}
-	
-	.ilLoginPage legend,
-	.ilLoginPage h1 {
+	.ilLoginPage h3.ilFormHeader,
+	.ilLogoutPage h3.ilFormHeader {
 		text-align: center;
 		width: 100%;
 		padding-bottom: .5em;
-		border-bottom: 3px solid #9bc34b
+		border-bottom: 3px solid #9bc34b;
+		background: none;
+		padding-left: 0;
+		padding-right: 0
 	}
 	
-	.ilLoginPage p {
-		margin: .5em 0;
-		float: left;
-		width: 100%
+	.ilLoginPage #form_ {
+		border-bottom: 1px solid #dbdbdb;
+		margin-bottom: 2em;
+		padding-bottom: 1em
 	}
 	
-	.ilLoginPage form p.first {
-		padding-top: 2em;
-		margin-top: 0;
-		border-top: 1px solid #fff
-	}
-	
-	.ilLoginPage label {
+	.ilLoginPage td.ilFormOption {
 		width: 30%;
-		float: left;
-		padding-top: .5em
+		padding: 0;
+		border: none;
+		text-align: left
 	}
 	
-	.ilLoginPage input,
-	.ilLoginPage input[type="submit"]:hover {
+	.ilLoginPage td.ilFormValue {
 		width: 60%;
-		float: right;
-		padding: .5em
+		padding: 0;
 	}
 	
-	.ilLoginPage input[type="submit"],
-	.ilLoginPage input[type="submit"]:hover {
+	.ilLoginPage td.ilFormValue input {
+		width: 93%;
+		margin-bottom: 1em
+	}
+	
+	td.ilFormFooter > div {
+		margin: 1em 0;
+		padding: 0;
+		border: none;
+		background: none
+	}
+	
+	td.ilFormFooter input,
+	td.ilFormFooter input:hover {
 		width: 100%;
-		float: none;
-		margin: 1em 0
+		padding: .6em 1em;
 	}
 
-#ilLoginHelpers {
+.ilLoginPage footer {
 	text-align: center;
-	margin: 0;
-	padding: 2em 0
 }
 
-#ilLoginHelpers .publiclink {
-	font-size: 1em;
-	margin-bottom: 1em;
-	display: block
-}
-
-#languageselection,
-#agreement {
+.ilLogoutPage footer {
 	padding-top: 1em;
-	margin-top: 1em
+	margin-top: 1.5em;
+	border-top: 3px solid #9bc34b;
 }
 
-#languageselection {
-	border-top: 1px solid #dbdbdb;
+.ilLoginPage footer p,
+.ilLogoutPage footer p {
+	margin-bottom: 1.5em;
+}
+
+.ilLoginPage a.il_ContainerItemCommand:link, 
+.ilLoginPage a.il_ContainerItemCommand:visited,
+.ilLogoutPage a.il_ContainerItemCommand:link, 
+.ilLogoutPage a.il_ContainerItemCommand:visited {
+	font-size: 100%
+}
+
+form[name="languageselection"] {
+	padding-bottom: 2em;
+	margin-bottom: 1em;
+	border-bottom: 3px solid #9bc34b;
 	text-align: center;
-	clear: both
 }
 
-	#languageselection select {
-			text-shadow: none
+	form[name="languageselection"] select {
+		text-shadow: none
 	}
 	
-	#languageselection input[type="submit"] {
-		padding: 0.2em 0.5em;
-		width: 15%;
+	form[name="languageselection"] input[type="submit"] {
+		display: none
 	}
-
-#agreement {
-	border-top: 1px solid #9bc34b;
-	text-align: center;
-}
 
 /* ============================================= */
 /* !Messages & Alerts */
@@ -1802,61 +1798,3 @@ only screen and (min-resolution: 1.5dppx) {
   	}
   
 }
-
-
-/* Responsive design. 
---------------------------------*/
-
-/*
-@media only screen and (max-width: 480px) {
-
-	div.ilMainHeader > div:first-child {
-		float: none !important;
-		margin-bottom: 0;
-		padding-bottom: 0;
-	}
-	
-		div.ilMainHeader div:first-child img {
-			margin: 1em auto;
-			margin-bottom: 0;
-			display: block;
-		}
-	
-	div.ilTopTitle {
-		text-align: center;
-		margin-top: 0 !important;
-		max-width: 100%;
-		width: 100%;
-		white-space: normal;
-		margin-bottom: 1em
-	}
-	
-	div.ilLogin {
-		left: 0;
-	}
-
-}
-
-@media only screen and (max-width: 768px) {
-  
-	.ilFrame,
-	body.kiosk {
-	  	font-size: .9em;
-	  	line-height: 1.2em
-	  }
-	 
-	div.ilMainHeader div:first-child img {
-		width: 90px;
-		height: 47px;
-	}
-	
-	div.ilTopTitle {
-		margin-top: .7em;
-	}
-	
-	div.ilTabContentInner {
-		padding: 1%;
-	}
-  
-}
-*/

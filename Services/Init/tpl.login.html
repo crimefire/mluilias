@@ -2,135 +2,59 @@
 
 <div id="ilMainContainer" class="ilFrame ilLoginPage">
 	
-	<a href="./" title="Zur Ilias Startseite">
-		<img class="mlu-siegel" src="./Customizing/global/skin/mluilias/images/HeaderIcon.png" width="153" height="80" border="0" alt="MLU Siegel" />
-	</a>
+	<a href="./" id="logo" title="Zur Ilias Startseite"></a>
 	
-	<!-- <p class="small">{ILIAS_RELEASE}</p> -->
 	<!-- BEGIN warning -->
-	<div class="warning">
-		<img alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+	<div class="ilFailureMessage">
 		<h5 class="ilAccHeadingHidden"><a id="il_message_focus" name="il_message_focus">{MESSAGE_HEADING}</a></h5>
 		{TXT_MSG_LOGIN_FAILED}
 	</div>
 	<!-- END warning -->
-	
 	<!-- BEGIN success -->
-	<div class="success">
-		<img class="ilSuccessMessage" alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+	<div class="ilSuccessMessage">
 		<h5 class="ilAccHeadingHidden"><a id="il_message_focus" name="il_message_focus">{MESSAGE_HEADING}</a></h5>
 		{TXT_MSG_LOGIN_SUCCESS}
 	</div>
 	<!-- END success -->
-	
 	<!-- BEGIN login_information -->
 	<div class="small">{TXT_LOGIN_INFORMATION}</div>
 	<!-- END login_information -->
-		
+	
+	<!-- BEGIN login_page_editor -->
+	{LPE}
+	<!-- END login_page_editor -->
+	
 	<!-- BEGIN cookies_howto -->
 	<a class="il_ContainerItemCommand" href="{LINK_NO_COOKIES}" target="_blank">{COOKIES_HOWTO}</a><br /><br />
 	<!-- END cookies_howto -->
+	<!-- BEGIN shib_login_form -->
+	{SHIB_LOGIN_FORM}
+	<!-- END shib_login_form -->
+	<!-- BEGIN cas_login -->
+	{CAS_LOGIN_FORM}
+	<!-- END cas_login_form -->
 	
-	<form method="post" action="{FORMACTION}" name="formlogin" id="formlogin">
-		
-		<input type="hidden" name="sendLogin" value="1" />
-		
-		<!-- BEGIN cas_login -->
-		{TXT_CAS_LOGIN}
-		
-		<p><a href="{TARGET_CAS_LOGIN}"><img src="{TXT_CAS_LOGIN_BUTTON}" border="0" alt="CAS Login Button"></a></p>
-		
-		{TXT_CAS_LOGIN_INSTRUCTIONS}
-		<!-- END cas_login -->
-		
-		<!-- BEGIN shibboleth_wayf_login -->
-		{TXT_SHIB_LOGIN} {TXT_SHIB_FEDERATION_NAME}
-		{TXT_SELECT_HOME_ORGANIZATION}
+	<!-- BEGIN ilias_login -->
+	{LOGIN_FORM}
+	<!-- END ilias_login -->
+	
+	<!-- BEGIN openid_login -->
+	{OID_LOGIN_FORM}
+	<!-- END openid_login -->
+	<footer>
 		<p>
-			<span class="warning">{TXT_SHIB_INVALID_SELECTION}</span><br/>
-			{SHIB_IDP_LIST} 
+			<!-- BEGIN lang_sel -->
+			{LANG_SELECTION}
+			<!-- END lang_sel -->
 		</p>
 		<p>
-			<input type="hidden" name="il_target" value="{ILW_TARGET}" />
-			<input type="submit" name="home_organization_selection" value="{TXT_CONTINUE}" />
-		</p>
-		{TXT_SHIB_LOGIN_INSTRUCTIONS}
-		{TXT_SHIB_CUSTOM_LOGIN_INSTRUCTIONS}
-		<!-- END shibboleth_wayf_login -->
-		
-		<!-- BEGIN shibboleth_login -->
-		{TXT_SHIB_LOGIN} {TXT_SHIB_FEDERATION_NAME}
-		<p><a href="shib_login.php?target={IL_TARGET}"><img src="{TXT_SHIB_LOGIN_BUTTON}" border="0" alt="Shibboleth Login Button"></a></p>
-		{TXT_SHIB_LOGIN_INSTRUCTIONS}
-		{TXT_SHIB_CUSTOM_LOGIN_INSTRUCTIONS}
-		<!-- END shibboleth_login -->
-		
-		<!-- BEGIN ilias_login -->
-		<!-- Auskommentiert, weil zu komplex: bastelt sich Form aus Services/Form/templates/default/tpl.property_form.html zusammen
-		_LOGIN_FORM} -->
-		
-		<!-- Unsere eigene Login Form -->
-		<fieldset>	
-			<legend>{TXT_ILIAS_LOGIN}</legend>
-			
-			<p class="first">
-				<label for="username">{TXT_USERNAME}</label>
-				<input type="text" name="username" id="username" value="{USERNAME}"/>
-			</p>
-			
-			<p>
-				<label for="password">{TXT_PASSWORD}</label>
-				<input type="password" name="password" id="password" value="{PASSWORD}"/>
-			</p>
-			
-			<p>
-				<input class="submit" type="submit" name="butSubmit" value="{TXT_SUBMIT}"/>
-			</p>
-		</fieldset>
-		<!-- END ilias_login -->
-		
-	</form>
-	
-	<p id="ilLoginHelpers">
-		<!-- BEGIN new_registration -->
-		<a class="il_ContainerItemCommand" href="{CMD_REGISTER}">{REGISTER}</a>
-		<!-- END new_registration -->
-		<!-- BEGIN homelink -->
-		<a class="il_ContainerItemCommand publiclink" href="./index.php{CLIENT_ID}">{TXT_HOME}</a>
-		<!-- END homelink -->
-		<!-- BEGIN password_assistance -->
-		<a class="il_ContainerItemCommand" href="{CMD_FORGOT_PASSWORD}">{FORGOT_PASSWORD}</a>
-		<a class="il_ContainerItemCommand" href="{CMD_FORGOT_USERNAME}">{FORGOT_USERNAME}</a>
-		<!-- END password_assistance -->
-		<!-- BEGIN client_list -->
-		<!-- Change Sn -->
-		<a class="il_ContainerItemCommand none" href="{CMD_CLIENT_LIST}">{TXT_CLIENT_LIST}</a>
-		<!-- END client_list -->
-	</p>
-	
-	<!-- Change Sn -->
-	<form name="languageselection" action="{LANG_FORM_ACTION}" method="post" id="languageselection">
-		<input type="hidden" name="cmd[showLogin]" value="1" />
-		<select name="change_lang_to" onChange="this.form.submit()">
-			<option value="">{TXT_CHOOSE_LANGUAGE}</option>
-			<!-- BEGIN languages -->
-			<option value="{LANG_KEY}" {SELECTED_LANG}>{LANG_NAME}</option>
-			<!-- END languages -->
-		</select>
-		<input class="submit" type="submit" value="{TXT_OK}"/>
-	</form>
-	<!-- END Change Sn -->
-	
-	<p id="agreement"><a class="il_ContainerItemCommand" href="{LINK_USER_AGREEMENT}">{USER_AGREEMENT}</a></p>
+			<!-- BEGIN reg_links -->
+			{REG_PWD_CLIENT_LINKS}
+			<!-- END reg_links -->
 
+			<!-- BEGIN agreement -->
+			<!-- {USER_AGREEMENT} -->
+			<!-- END agreement -->
+		</p>
+	</footer>
 </div><!-- END styling div -->
-
-<script language="JavaScript">
-<!--
-if (document.formlogin.username && document.formlogin.password)
-{
-	if(document.formlogin.username.value!="") document.formlogin.password.focus();
-	else document.formlogin.username.focus();
-}
-//-->
-</script>
