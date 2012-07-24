@@ -668,10 +668,10 @@ nav[role="navigation"] {
 		float: left;
 		padding: .5em 1.5em .4em 1.5em;
 		margin: 0;
-		-webkit-transition: background .2s ease-in-out;
-		-moz-transition: background .2s ease-in-out;
-		-o-transition: background .2s ease-in-out;
-		transition: background .2s ease-in-out;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
 		position: relative;
 		z-index: 99;
 	}
@@ -679,20 +679,21 @@ nav[role="navigation"] {
 		nav[role="navigation"] a:hover,
 		nav[role="navigation"] a.MMActive,
 		nav[role="navigation"] a.MMInactive:hover {
-			background-color: #8cb144;
-			background-color: rgba(0,0,0,.1);
-			text-decoration: none
+			text-decoration: none;
+		}
+		
+		nav[role="navigation"] a:hover {
+			background: rgba(0,0,0,.1);
 		}
 	
 		nav[role="navigation"] a.MMActive {
+			background: #7e9e3d;
+			background: rgba(0,0,0,.2);
 			color: #fff;
 			text-shadow: 0 -1px 1px #005133;
-			background-image: -moz-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 76%, rgba(0,0,0,0) 100%);
-			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.2)), color-stop(76%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0)));
-			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 76%,rgba(0,0,0,0) 100%);
-			background-image: -o-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 76%,rgba(0,0,0,0) 100%);
-			background-image: -ms-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 76%,rgba(0,0,0,0) 100%);
-			background-image: linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 76%,rgba(0,0,0,0) 100%);
+			-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,.4);
+			-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,.4);
+			box-shadow: inset 0px 1px 0px rgba(255,255,255,.4);
 		}
 		
 		nav[role="navigation"] li.ilMainMenu:first-child a.MMActive {
@@ -705,9 +706,10 @@ nav[role="navigation"] {
 		}
 		
 		/* the dropdown menus */
-		
 		nav[role="navigation"] li > div {
 			top: 101% !important;
+			-webkit-box-shadow: 0 2px 4px #C0C0C0;
+			-moz-box-shadow: 0 2px 4px #C0C0C0;
 			box-shadow: 0 2px 4px #C0C0C0;
 		}
 		
@@ -717,12 +719,6 @@ nav[role="navigation"] {
 		
 		nav[role="navigation"] li > div a:hover {
 			background: #9bc34b;
-			background: -moz-linear-gradient(top, #a1cb4f 0%, #9bc34b 100%);
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a1cb4f), color-stop(100%,#9bc34b));
-			background: -webkit-linear-gradient(top, #a1cb4f 0%,#9bc34b 100%);
-			background: -o-linear-gradient(top, #a1cb4f 0%,#9bc34b 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A1CB4F', endColorstr='#9BC34B',GradientType=0 );
-			background: linear-gradient(top, #a1cb4f 0%,#9bc34b 100%);
 		}
 
 	div.ilMainMenuSearch {
@@ -985,7 +981,7 @@ td.ilFormHeader, td.ilFormFooter {
 	width: 0;
 	height: 0;
 	vertical-align: top;
-	margin-top: 8px;
+	margin-top: 9px;
 	margin-left: 2px;
 	border-top:   5px solid #000;
 	border-right: 5px solid transparent;
