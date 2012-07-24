@@ -574,6 +574,17 @@ aside#userAccount {
 		padding: 0 1.5em;
 		border-left: 1px solid rgba(0, 81, 51, .1)
 	}
+	
+	div.ilLogin span.il_menu {
+		padding-left: 0
+	}
+	
+	/* Public language selector */
+	#ilAdvSelListAnchorElement_asl {
+		margin-left: 2em;
+		right: -1.5em;
+		position: relative
+	}
 
 /* Le notification bubble 
    adapted from Badged | http://kremalicious.com/badged
@@ -629,7 +640,7 @@ nav[role="navigation"] {
 	position: relative;
 	padding: 0;
 	margin-bottom: .5em;
-
+	min-height: 36px;
 }
 
 	nav[role="navigation"] ul {
