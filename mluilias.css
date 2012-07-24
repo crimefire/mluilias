@@ -281,10 +281,10 @@ select {
 
 input:focus,
 textarea:focus {
-	-webkit-box-shadow: 0 0 5px #93c8ba;
-	-moz-box-shadow: 0 0 5px #93c8ba;
-	box-shadow: 0 0 5px #93c8ba;
-	border: 1px solid #bfc9c5;
+	-webkit-box-shadow: 0 0 7px #92c3d1;
+	-moz-box-shadow: 0 0 7px #92c3d1;
+	box-shadow: 0 0 7px #92c3d1;
+	border: 1px solid #79aaba;
 	background: #fff;
 	outline: none
 }
@@ -1585,12 +1585,13 @@ div.ilMemberViewMainHeader h4 {
 }
 
 
-/* Login Page
---------------------------------*/
+/* ============================================= */
+/* !Login & Logout Page */
+/* ============================================= */
 
 #ilMainContainer.ilLoginPage,
 #ilMainContainer.ilLogoutPage {
-	max-width: 400px;
+	max-width: 320px;
 	min-width: 240px;
 	padding-top: 5%
 }
@@ -1618,21 +1619,24 @@ div.ilMemberViewMainHeader h4 {
 		padding-bottom: 1em
 	}
 	
+	.ilLoginPage #form_ td {
+		display: block
+	}
+	
 	.ilLoginPage td.ilFormOption {
-		width: 30%;
 		padding: 0;
 		border: none;
-		text-align: left
+		text-align: left;
+		font-size: .8em
 	}
 	
 	.ilLoginPage td.ilFormValue {
-		width: 60%;
 		padding: 0;
 	}
 	
 	.ilLoginPage td.ilFormValue input {
 		width: 93%;
-		margin-bottom: 1em
+		margin-bottom: 1em;
 	}
 	
 	td.ilFormFooter > div {
