@@ -1190,8 +1190,7 @@ td.il_InfoScreenProperty {
 }
 
 /* Hide action elements, show them on hover */
-
-div.il_ContainerItemCommands2 {
+div.il_ContainerListItem div.float_right {
 	-moz-opacity: 0;
 	-khtml-opacity: 0;
 	opacity: 0;
@@ -1201,8 +1200,9 @@ div.il_ContainerItemCommands2 {
 	transition: opacity .2s ease-in-out;
 }
 
-	td.ilCLI:hover div.il_ContainerItemCommands2,
-	.touch div.il_ContainerItemCommands2 {
+	tr.ilCLIRow1:hover div.il_ContainerListItem div.float_right,
+	tr.ilCLIRow2:hover div.il_ContainerListItem div.float_right,
+	.touch div.il_ContainerListItem div.float_right {
 		-moz-opacity: 1;
 		-khtml-opacity: 1;
 		opacity: 1;
