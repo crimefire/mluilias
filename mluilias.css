@@ -407,12 +407,18 @@ Usage: <i class="icon-mail"></i>
 div.ilInfoMessage:before, 
 div.ilFailureMessage:before, 
 div.ilSuccessMessage:before, 
-div.ilQuestionMessage:before {
+div.ilQuestionMessage:before,
+a[href^="repository.php"]:before,
+a[href*="target=lm"]:before,
+a[href*="target=crs"]:before,
+a[href*="baseClass=ilLMPresentationGUI"]:before {
 	font-family: 'IcoMoon';
 	font-style: normal;
 	font-weight: normal;
 	speak: none;
 	font-size: 16px;
+	min-width: 16px;
+	min-height: 16px;
 }
 .icon-mail:before {
 	content: "\e000";
@@ -433,7 +439,40 @@ div.ilInfoMessage:before {
 div.ilQuestionMessage:before {
 	content: "\e004";
 }
+/* Repository (Kategorien) */
+.icon-folder:before,
+div.ilContainerListItemOuter > div > a[href^="repository.php"]:before,
+#mm_rep_ov a[href^="repository.php"]:before {
+	content: "\e005";
+}
 
+/* Lernmodul */
+.icon-book:before,
+a[href*="target=lm"]:before,
+div.ilContainerListItemOuter > div > a[href*="baseClass=ilLMPresentationGUI"]:before,
+#mm_rep_ov a[href*="baseClass=ilLMPresentationGUI"]:before {
+	content: "\e006";
+}
+
+/* Kurs */
+.icon-graduation:before,
+a[href*="target=crs"]:before {
+	content: "\e007";
+	font-size: 18px
+}
+
+/* hide all the img icons */
+a[href^="repository.php"] img,
+a[href*="target=lm"] img,
+a[href*="target=crs"] img,
+a[href*="baseClass=ilLMPresentationGUI"] img { display: none }
+
+/* float some icons in lists */
+div.ilContainerListItemOuter > div > a[href^="repository.php"],
+div.ilContainerListItemOuter > div > a[href*="baseClass=ilLMPresentationGUI"] {
+	float: left;
+	display: block;
+}
 
 /* ============================================= */
 /* !Layout */
