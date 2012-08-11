@@ -1,8 +1,6 @@
-<div id="ilMainContainer" class="ilFrame ilLoginPage">
+<div id="ilMainContainer" class="ilFrame ilLoginPage ilUserAgree">
 
-	<a href="./" title="Zur Ilias Startseite">
-		<img class="mlu-siegel" src="./Customizing/global/skin/mluilias/images/HeaderIcon.png" width="153" height="80" border="0" alt="MLU Siegel" />
-	</a>
+	<a href="./" id="logo" title="Zur Ilias Startseite"></a>
 
 	{STATUSLINE}
 
@@ -19,17 +17,16 @@
 	
 	<h1>{TXT_PAGEHEADLINE}</h1>
 
-	{MESSAGE}
+	<p>{MESSAGE}</p>
 	
-	{TXT_AGREEMENT}
+	<p>{TXT_AGREEMENT}</p>
 	
-	{TXT_USR_AGREEMENT}
+	<p>{TXT_USR_AGREEMENT}</p>
 	
 	<!-- BEGIN get_acceptance -->
 	<form action="{FORM_ACTION}" method="post">
-		<b><label for="status">{ACCEPT_AGREEMENT}</label></b>&nbsp;
-	    {ACCEPT_CHECKBOX}&nbsp;
-		<input type="submit" class="submit" name="cmd[getAcceptance]" value="{TXT_SUBMIT}" />
+		<p>{ACCEPT_CHECKBOX} <b><label for="status">{ACCEPT_AGREEMENT}</label></b></p>
+		<p><input type="submit" class="submit" name="cmd[getAcceptance]" value="{TXT_SUBMIT}" /></p>
 	</form>
 	<!-- END get_acceptance -->
 

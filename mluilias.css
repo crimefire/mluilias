@@ -1634,6 +1634,17 @@ form[name="languageselection"] {
 		display: none
 	}
 
+#ilMainContainer.ilLoginPage.ilUserAgree {
+	max-width: 540px;
+	min-width: 400px;
+}
+
+.ilUserAgree #languageselection {
+	margin-top: 1.5em
+}
+
+.ilUserAgree p {margin-bottom: 1.5em}
+
 /* ============================================= */
 /* !Messages & Alerts */
 /* ============================================= */
