@@ -383,6 +383,57 @@ div.ilTableCommandRow input.submit {
 ::-moz-selection{ background: #000; color:#fff; text-shadow: none; }
 ::selection { background:#000; color:#fff; text-shadow: none; }
 
+/* ============================================= */
+/* !Icons */
+/* ============================================= */
+
+/* 
+Sub-setted icon files
+Usage: <i class="icon-mail"></i> 
+*/
+@font-face {
+	font-family: 'IcoMoon';
+	src: url('assets/fonts/IcoMoon.eot');
+	src: url('assets/fonts/IcoMoon.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/IcoMoon.svg#IcoMoon') format('svg'),
+		url('assets/fonts/IcoMoon.woff') format('woff'),
+		url('assets/fonts/IcoMoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before,
+div.ilInfoMessage:before, 
+div.ilFailureMessage:before, 
+div.ilSuccessMessage:before, 
+div.ilQuestionMessage:before {
+	font-family: 'IcoMoon';
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	font-size: 16px;
+}
+.icon-mail:before {
+	content: "\e000";
+}
+.icon-smiley:before,
+div.ilSuccessMessage:before {
+	content: "\e001";
+}
+.icon-shocked:before,
+div.ilFailureMessage:before {
+	content: "\e002";
+}
+.icon-info:before,
+div.ilInfoMessage:before {
+	content: "\e003";
+}
+.icon-help:before,
+div.ilQuestionMessage:before {
+	content: "\e004";
+}
+
 
 /* ============================================= */
 /* !Layout */
