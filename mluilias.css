@@ -1831,6 +1831,13 @@ a.back2tab, a.back2tab:hover {
 	overflow: scroll;
 }
 
+/* Fix for popup under buttons */
+table.il_editmenu {
+	z-index: 15;
+	position: relative;
+}
+
+
 /* ========================================== */
 /* high pixel ratio devices   */
 /* ========================================== */
