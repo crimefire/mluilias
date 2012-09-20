@@ -1837,6 +1837,11 @@ table.il_editmenu {
 	position: relative;
 }
 
+/* module images fix */
+table.ilc_media_cont_MediaContainer {
+	width: auto;
+}
+
 
 /* ========================================== */
 /* high pixel ratio devices   */
