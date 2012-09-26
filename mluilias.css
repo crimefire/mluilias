@@ -1198,6 +1198,7 @@ div.il_ContainerListItem div.float_right {
 
 	tr.ilCLIRow1:hover div.il_ContainerListItem div.float_right,
 	tr.ilCLIRow2:hover div.il_ContainerListItem div.float_right,
+	div.il_ContainerListItem:hover div.float_right,
 	.touch div.il_ContainerListItem div.float_right {
 		-moz-opacity: 1;
 		-khtml-opacity: 1;
